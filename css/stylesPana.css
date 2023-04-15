@@ -71,7 +71,7 @@ body {
     position: fixed;
     z-index: 10000;
     text-align: center;
-    background-color:#4f000b;
+    background-color: #4f000b;
 }
 
 .menuNavega li {
@@ -90,7 +90,7 @@ a {
     color: #f9f7f3;
 }
 
-.mainIndex{
+.mainIndex {
     position: relative;
     height: 500px;
     width: 100%;
@@ -104,7 +104,8 @@ a {
     left: 15%;
     text-align: center;
     overflow: auto;
-    background-color:#4f000b;}
+    background-color: #4f000b;
+}
 
 .imgMain {
     /* aplicable a todas las img dentro de un main */
@@ -127,59 +128,71 @@ a {
     font-size: 16px;
 }
 
+h {
+    color: #4f000b;
+    background-color: beige;
+}
+
 .conoceIndex {
     position: relative;
     width: 100%;
     height: 215px;
-    
+
 }
-.conoceIndex article{
+
+.conoceIndex article {
     position: absolute;
     left: 10%;
-    top:10px ;
+    top: 10px;
     width: 80%;
     height: 175px;
     overflow: auto;
-    background-color:#4f000b;
+    background-color: #4f000b;
 }
 
-.productosPrincipales{
+.productosPrincipales {
     position: relative;
     width: 100%;
     height: 420px;
 }
-.productosPrincipales article{
+
+.productosPrincipales article {
     position: absolute;
     width: 90%;
     height: 400px;
     top: 10px;
     left: 5%;
-    background-color:#4f000b;
+    background-color: #4f000b;
     overflow: auto;
 }
 
-.producto{ /* aplicable a todos los contenedores de imagenes de productos, exceptuando main */
+.producto {
+    /* aplicable a todos los contenedores de imagenes de productos, exceptuando main */
     position: relative;
     display: inline-block;
     height: 330px;
-    width:440px;
+    width: 440px;
     background-color: #f9f7f3;
     margin: 10px;
 }
-.imgProducto{ /* aplicable a todas las imagenes de productos, exceptuando main */
+
+.imgProducto {
+    /* aplicable a todas las imagenes de productos, exceptuando main */
     height: 320px;
     width: 430px;
     margin: 5px;
 }
+
 /* pendiente .iframe{} */
 
-.mainContacto{ /* main pagina contacto, falta continuar */
+.mainContacto {
+    /* main pagina contacto, falta continuar */
     position: relative;
     width: 100%;
-    height:600px;
+    height: 600px;
 }
 
-.mainContacto article{
+.mainContacto article {
     position: absolute;
     left: 0;
     top: 50px;
@@ -187,7 +200,8 @@ a {
     height: 350px;
     margin: 10px;
 }
-.formulario{
+
+.formulario {
     position: absolute;
     left: 50%;
     top: 50px;
@@ -196,7 +210,8 @@ a {
     margin: 10px;
 }
 
-.piePagina { /* todo el pie de página */
+.piePagina {
+    /* todo el pie de página */
     background-color: black;
     color: #f9f7f3;
     font-size: 15px;
