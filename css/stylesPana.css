@@ -1,0 +1,243 @@
+* {
+    /* Reseteo CSS, border box-permite que el contenedor mantenga el tamaño que le damos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Hace que el valor de 1rem=10px, ya que por default es 16px */
+    font-size: 62.5%;
+}
+
+body {
+    /* Tipo de fuente a usar, es externa, y de no poder se usa sans-serif, recuerda se prioriza id-class-tag*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #adc178;
+    color: #f9f7f3;
+}
+
+.encabezado {
+    background-color: #4f000b;
+    width: 100%;
+    height: 130px;
+    position: relative;
+}
+
+.logoMenu {
+    display: inline-block;
+    height: 130px;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+}
+
+.mediosContacto {
+    /* logos de medios contacto, también en footer */
+    display: inline-block;
+    height: 80px;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.loguitos {
+    /* aplicable a todos los logos pequeños */
+    width: 30px;
+    height: 30px;
+    margin: 7px;
+}
+
+
+.encabezado nav {
+    display: inline-block;
+    height: 50px;
+    width: 75%;
+    position: absolute;
+    top: 80px;
+    left: 25%;
+}
+
+.menuNavega {
+    list-style-type: none;
+    font-size: 19px;
+    position: fixed;
+    z-index: 10000;
+    text-align: center;
+    background-color:#4f000b;
+}
+
+.menuNavega li {
+    display: inline-block;
+    padding: 5px 12px;
+
+}
+
+.submenuNavega {
+    display: inline-block;
+}
+
+a {
+    /* aplicable a todos los "a", recuerda que se prioriza id-class-tag */
+    text-decoration: none;
+    color: #f9f7f3;
+}
+
+.mainIndex{
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+.mainIndex section {
+    position: absolute;
+    height: 480px;
+    width: 70%;
+    top: 10px;
+    left: 15%;
+    text-align: center;
+    overflow: auto;
+    background-color:#4f000b;}
+
+.imgMain {
+    /* aplicable a todas las img dentro de un main */
+    height: 450px;
+    width: 800px;
+    margin: 10px;
+}
+
+
+.headingBottom {
+    /* aplicable a todos los "h" que esten en la parte baja del contenedor */
+    height: 25px;
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    text-align: center;
+    background-color: beige;
+    color: #4f000b;
+    font-size: 16px;
+}
+
+.conoceIndex {
+    position: relative;
+    width: 100%;
+    height: 215px;
+    
+}
+.conoceIndex article{
+    position: absolute;
+    left: 10%;
+    top:10px ;
+    width: 80%;
+    height: 175px;
+    overflow: auto;
+    background-color:#4f000b;
+}
+
+.productosPrincipales{
+    position: relative;
+    width: 100%;
+    height: 420px;
+}
+.productosPrincipales article{
+    position: absolute;
+    width: 90%;
+    height: 400px;
+    top: 10px;
+    left: 5%;
+    background-color:#4f000b;
+    overflow: auto;
+}
+
+.producto{ /* aplicable a todos los contenedores de imagenes de productos, exceptuando main */
+    position: relative;
+    display: inline-block;
+    height: 330px;
+    width:440px;
+    background-color: #f9f7f3;
+    margin: 10px;
+}
+.imgProducto{ /* aplicable a todas las imagenes de productos, exceptuando main */
+    height: 320px;
+    width: 430px;
+    margin: 5px;
+}
+/* pendiente .iframe{} */
+
+.mainContacto{ /* main pagina contacto, falta continuar */
+    position: relative;
+    width: 100%;
+    height:600px;
+}
+
+.mainContacto article{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 35%;
+    height: 350px;
+    margin: 10px;
+}
+.formulario{
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    width: 65%;
+    height: 550px;
+    margin: 10px;
+}
+
+.piePagina { /* todo el pie de página */
+    background-color: black;
+    color: #f9f7f3;
+    font-size: 15px;
+    height: 170px;
+    width: 100%;
+    position: relative;
+}
+
+.contactoPie {
+    display: inline-block;
+    width: 40%;
+    height: 80px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logoPie {
+    display: inline-block;
+    width: 20%;
+    height: 80px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    padding-top: 10px;
+
+}
+
+.copyrightAutor {
+    border-top: #adc178;
+    text-align: center;
+    border-top-style: groove;
+    border-top-color: gray;
+    height: 12%;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+
+
+}
