@@ -1,3 +1,4 @@
+/* Se usan en todo el sitio (o casi todo) */
 * {
     /* Reseteo CSS, border box-permite que el contenedor mantenga el tamaño que le damos */
     margin: 0;
@@ -18,101 +19,24 @@ body {
     color: #f9f7f3;
 }
 
-.encabezado {
-    background-color: #4f000b;
-    width: 100%;
-    height: 130px;
-    position: relative;
-}
-
-.logoMenu {
-    display: inline-block;
-    height: 130px;
-    width: 25%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-left: 10px;
-}
-
-.mediosContacto {
-    /* logos de medios contacto, también en footer */
-    display: inline-block;
-    height: 80px;
-    width: 40%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 10px;
-    padding-right: 10px;
-    text-align: right;
-}
-
-.loguitos {
-    /* aplicable a todos los logos pequeños */
-    width: 30px;
-    height: 30px;
-    margin: 7px;
-}
-
-
-.encabezado nav {
-    display: inline-block;
-    height: 50px;
-    width: 75%;
-    position: absolute;
-    top: 80px;
-    left: 25%;
-}
-
-.menuNavega {
-    list-style-type: none;
-    font-size: 19px;
-    position: fixed;
-    z-index: 10000;
-    text-align: center;
-    background-color:#4f000b;
-}
-
-.menuNavega li {
-    display: inline-block;
-    padding: 5px 12px;
-
-}
-
-.submenuNavega {
-    display: inline-block;
-}
-
 a {
-    /* aplicable a todos los "a", recuerda que se prioriza id-class-tag */
     text-decoration: none;
     color: #f9f7f3;
 }
 
-.mainIndex{
-    position: relative;
-    height: 500px;
-    width: 100%;
-}
+/* hr{color: transparent;}  se usa en párrafos ahorita siempre no lo usé*/
 
-.mainIndex section {
+.pageTitle {
+    /* Título, nombre del negocio */
+    font-family: 'Delicious Handrawn', 'Poppins', sans-serif;
+    font-size: 50px;
     position: absolute;
-    height: 480px;
-    width: 70%;
-    top: 10px;
-    left: 15%;
+    height: 50%;
+    width: 60%;
+    padding-top: 10px;
+    left: 20%;
     text-align: center;
-    overflow: auto;
-    background-color:#4f000b;}
-
-.imgMain {
-    /* aplicable a todas las img dentro de un main */
-    height: 450px;
-    width: 800px;
-    margin: 10px;
 }
-
 
 .headingBottom {
     /* aplicable a todos los "h" que esten en la parte baja del contenedor */
@@ -127,117 +51,591 @@ a {
     font-size: 16px;
 }
 
-.conoceIndex {
-    position: relative;
-    width: 100%;
-    height: 215px;
-    
-}
-.conoceIndex article{
+.headingTop {
+    /* aplicable a todos los "h" que esten en la parte alta del contenedor */
+    height: 25px;
+    width: 30%;
     position: absolute;
-    left: 10%;
-    top:10px ;
-    width: 80%;
-    height: 175px;
-    overflow: auto;
-    background-color:#4f000b;
+    top: 0;
+    left: 35%;
+    text-align: center;
+    background-color: beige;
+    color: #4f000b;
+    font-size: 19px;
 }
 
-.productosPrincipales{
-    position: relative;
-    width: 100%;
-    height: 420px;
-}
-.productosPrincipales article{
-    position: absolute;
-    width: 90%;
-    height: 400px;
-    top: 10px;
-    left: 5%;
-    background-color:#4f000b;
-    overflow: auto;
+.imageMain {
+    /* Aplicable a toda imagen dentro de un main */
+    height: 450px;
+    width: 800px;
+    margin: 5px 10px;
 }
 
-.producto{ /* aplicable a todos los contenedores de imagenes de productos, exceptuando main */
-    position: relative;
-    display: inline-block;
-    height: 330px;
-    width:440px;
+.imageMainCont {
+    /* Aplicable a todo contenedor de imagen main */
+    height: 460px;
+    width: 820px;
     background-color: #f9f7f3;
-    margin: 10px;
 }
-.imgProducto{ /* aplicable a todas las imagenes de productos, exceptuando main */
+
+.imageProduct {
+    /* Aplicable a toda imagen de producto */
     height: 320px;
     width: 430px;
     margin: 5px;
 }
-/* pendiente .iframe{} */
 
-.mainContacto{ /* main pagina contacto, falta continuar */
+.imageProductCont {
+    /* Aplicable a todo contenedor de imagen de producto */
     position: relative;
-    width: 100%;
-    height:600px;
-}
-
-.mainContacto article{
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 35%;
-    height: 350px;
-    margin: 10px;
-}
-.formulario{
-    position: absolute;
-    left: 50%;
-    top: 50px;
-    width: 65%;
-    height: 550px;
-    margin: 10px;
-}
-
-.piePagina { /* todo el pie de página */
-    background-color: black;
-    color: #f9f7f3;
-    font-size: 15px;
-    height: 170px;
-    width: 100%;
-    position: relative;
-}
-
-.contactoPie {
     display: inline-block;
-    width: 40%;
-    height: 80px;
-    text-align: left;
+    height: 330px;
+    width: 440px;
+    background-color: #f9f7f3;
+    margin: 5px 5px;
+}
+
+.nav-item {
+    /* bootstrap clases header */
+    background-color: #4f000b;
+    /* border-left: .5px groove #adc178;  por si no se nota*/
+}
+
+.nav {
+    justify-content: space-evenly;
+}
+
+.nav-link {
+    color: #f9f7f3;
+    padding: 3px 4px;
+}
+
+/* fin bootstrap nav */
+
+.logoHeader {
+    /* Aplicable a la imagen del logo del negocio en el header */
+    height: 120px;
+    width: 120px;
+}
+
+.logoHeaderCont {
+    /* Donde está contenida la imagen del logo del negocio en el header */
+    position: absolute;
+    top: 0;
+    left: 0;
     padding-top: 10px;
     padding-left: 10px;
+    height: 100%;
+    width: 10%;
+}
+
+.navigator {
+    /* navegador */
+    position: absolute;
+    height: 30%;
+    top: 55%;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.headerCont {
+    /* Encabezado */
+    position: relative;
+    height: 140px;
+    width: 100%;
+    background-color: #4f000b;
+}
+
+.logoMini {
+    /* Son todos los logos chiquitos, de redes sociales, contacto */
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
+
+.communicateMedia {
+    /* Aquí están contenidos los mini logos de comunicación */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 5px;
+    height: 50%;
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+
+.footerCont {
+    position: relative;
+    height: 130px;
+    width: 100%;
+    background-color: #0a0908;
+    font-size: 15px;
+}
+
+.contactFooter {
+    /* Contactanos y horario de atención en footer */
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.logoPie {
-    display: inline-block;
-    width: 20%;
-    height: 80px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 40%;
+    padding-left: 10px;
     padding-top: 10px;
-
+    height: 50%;
+    width: 20%;
 }
 
 .copyrightAutor {
-    border-top: #adc178;
+    /* Copyright en footer */
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+    height: 30%;
+    width: 100%;
     text-align: center;
     border-top-style: groove;
     border-top-color: gray;
-    height: 12%;
-    width: 100%;
-    position: absolute;
-    bottom: 20px;
+}
 
+.logoFooter {
+    /* Aplicable a la imagen del logo del negocio en el footer */
+    height: 75px;
+    width: 75px;
+    margin: 5px;
+}
+
+.logoFooterCont {
+    /* Donde está contenida la imagen del logo del negocio en el footer */
+    position: absolute;
+    top: 0;
+    left: 20%;
+    padding-top: 5px;
+    height: 70%;
+    width: 60%;
+    text-align: center;
+}
+
+
+/* página index  uso de positions y un poco de flex*/
+.mainIndex {
+    position: relative;
+    height: 500px;
+}
+
+.mainIndex section {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 480px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.conoceIndex {
+    position: relative;
+    height: 150px;
+    width: 80%;
+    left: 10%;
 
 }
+
+.topProducts {
+    position: relative;
+    height: 700px;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+}
+
+.iframeDown {
+    position: relative;
+    height: 450px;
+    width: 90%;
+    left: 5%;
+    display: flex;
+}
+
+
+/* --PENDIENTE--Página productos intentala con casi solo bootstrap */
+.contTproducts {
+    /* Página productos contenedor total grid categorias productos */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px 400px 400px 400px;
+    grid-template-areas:
+        "especiales"
+        "panaderia"
+        "pasteleria"
+        "extras";
+}
+
+/*  donde colocar los botones .contBtns{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    height: 50%;
+    display: flex;
+    flex
+    flex-direction: column;
+    justify-content: end;
+} */
+.btn-group {
+    /* bootstrap botones, DUDA colocarlo en header o abajo del header, ahorita está en header*/
+    position: absolute;
+    height: 20px;
+    width: 20%;
+    bottom: 8px;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 10px;
+}
+
+.btn {
+    /* height: 30px;
+    width: 65px; */
+    background-color: #0a0908;
+    color: #f9f7f3;
+    font-size: 9.5px;
+    text-align: center;
+    padding: 0;
+}
+
+.btn:hover {
+    background-color: #4f000b;
+    color: #f9f7f3;
+    /* fin bootstrap botones */
+}
+
+#especiales {
+    grid-area: especiales;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+
+}
+
+#panaderia {
+    grid-area: panaderia;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+#pasteleria {
+    grid-area: pasteleria;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+#extras {
+    grid-area: extras;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+
+/* Página como comprar, usa grid, se responsive */
+.contTsteps {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 500px;
+    grid-template-areas:
+        "howTo howTo buy";
+    font-size: 15px; 
+    text-align: justify;   
+}
+
+.contTsteps__how {
+    grid-area: howTo;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #201d19;
+}
+.contTsteps__section--style{
+    border-top: 1px groove #0a0908;
+}
+.contTsteps__section--style a{text-decoration-line: underline;}
+.contTsteps__buyProduct {
+    grid-area: buy;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Tamaño celular-Página como comprar */
+@media screen and (max-width:500px){
+    .contTsteps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 480px auto;
+        grid-template-areas:
+            "howTo howTo"
+            "buy buy";
+        font-size: 12px; 
+    }
+    .contTsteps__title{
+        background-color: #f9f7f3;
+        color: #0a0908;
+        text-align: center;
+    }
+    .contTsteps__section--style{
+        list-style-type: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* Página contacto usa grid y BEM, responsive, se mantiene header/footer de positions y bootstrap*/
+.contactT {
+    /* Contenedor grid página contacto formulario, info, visit*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 50px 460px 460px;
+    row-gap: 10px;
+    grid-template-areas:
+        "titl titl titl titl"
+        "info info form form"
+        "visit visit visit visit";
+    justify-items: center;
+    color: #0a0908;
+}
+
+.contactT__title {
+    grid-area: titl;
+    width: 50%;
+    text-align: center;
+    align-self: center;
+}
+
+.contactT__info {
+    grid-area: info;
+    /* width: 80%; para ir probando como queda */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contactT__info__article {
+    height: 230px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contactT__info__article--sentence {
+    border-bottom: 1px groove #0a0908;
+    text-align: center;
+    font-size: 14px;
+    color: #0a0908
+}
+
+.contactT__form {
+    grid-area: form;
+    /* width: 80%; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+form {
+    background-color: #4f000b;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+}
+
+input[type=text] {
+    border: 3px groove #0a0908;
+    background-color: transparent;
+    width: 75%;
+    color: #f9f7f3;
+}
+
+input[type=text]:focus {
+    background-color: #201d19;
+}
+
+input[type=email] {
+    border: 3px groove #0a0908;
+    background-color: transparent;
+    width: 75%;
+    color: #f9f7f3;
+}
+
+input[type=email]:focus {
+    background-color: #201d19;
+}
+
+input[type=reset] {
+    border: 3px groove #0a0908;
+    background-color: #201d19;
+    width: 35%;
+    color: #f9f7f3;
+}
+
+input[type=submit] {
+    border: 3px groove #0a0908;
+    background-color: #201d19;
+    width: 35%;
+    color: #f9f7f3;
+}
+
+select {
+    border: 3px groove #0a0908;
+    background-color: #201d19;
+    width: 40%;
+    color: #f9f7f3;
+    text-align: center;
+}
+
+.contactT__form__element--inrow {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    color: #f9f7f3;
+}
+
+.contactT__visit {
+    grid-area: visit;
+}
+
+.contactT__visit--size {
+    width: 1000px;
+    height: 450px;
+}
+
+
+/* Tamaño celular-Página contacto */
+@media screen and (max-width: 500px) {
+
+    /* HEADER */
+    .headerCont {
+        height: 80px;
+    }
+
+    .logoHeaderCont {
+        display: none;
+    }
+
+    .pageTitle {
+        font-size: 19px;
+        left: 0;
+        width: 60%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .navigator {
+        font-size: 9.5px;
+        left: 0;
+        width: 100%;
+    }
+
+    .logoMini {
+        height: 18px;
+        width: 18px;
+    }
+
+    /* FOOTER */
+    .footerCont {
+        font-size: 10px;
+    }
+
+    .communicateMedia {
+        width: 50%;
+        height: 30%;
+    }
+
+    .contactFooter {
+        top: 30%;
+        left: 50%;
+        height: 40%;
+        width: 50%;
+        text-align: right;
+        padding-top: 0;
+        padding-right: 10px;
+    }
+
+    .logoFooterCont {
+        left: 0;
+        width: 50%;
+        height: 50%;
+        text-align: left;
+    }
+
+    .logoFooter {
+        height: 50px;
+        width: 50px;
+    }
+
+    /* CONTENEDOR GRID pagina contacto formulario, info, visit*/
+    .contactT {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 300px auto 350px;
+        row-gap: 5px;
+        grid-template-areas:
+            "titl"
+            "info"
+            "form"
+            "visit";
+    }
+
+    .contactT__title {
+        font-size: 15px;
+        width: 100%;
+        background-color: #f9f7f3;
+    }
+
+    .contactT__info__article {
+        width: 300px;
+        height: 140px
+    }
+
+    .contactT__info__article--sentence {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    form {
+        font-size: 13px;
+        padding: 0;
+    }
+
+    .contactT__form__element--inrow {
+        width: 300px;
+    }
+
+    .contactT__visit--size {
+        width: 300px;
+        height: 340px;
+    }
+
+    /* Tamaño celular-Página contacto FIN */
+}
+
+
+
+
+/*  --PRUEBA-- OBJECT FIT .mainImg3{
+    height: 450px;
+    width: 700px;
+    object-fit: cover;  
+} */
