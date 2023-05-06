@@ -1,0 +1,255 @@
+/* INTENTÉ HACERLOS AQUI Y LLAMARLOS DESDE STYLES
+PERO NO FUNCIONABA CASI NADA, PERO LA CONSERVÉ
+PARA VISUALIZACIÓN */
+
+/* Tamaño tablet-Página inicio */
+@media screen and (max-width:840px) {
+    .mainIndex {
+        height: 470px;
+
+        section {
+            height: 440px;
+        }
+
+        .imageMain {
+            /* Aplicable a toda imagen dentro de un main */
+            @include sizesWH (510px, 420px);
+        }
+    }
+
+    .conoceIndex {
+        position: relative;
+        @include sizesWH (90%, 160px);
+        left: 5%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tamaño celular-Página inicio */
+@media screen and (max-width:500px) {
+    .mainIndex {
+        height: 400px;
+
+        section {
+            height: 370px;
+        }
+
+        .imageMain {
+            /* Aplicable a toda imagen dentro de un main */
+            @include sizesWH (310px, 350px);
+            margin: 3px;
+        }
+    }
+
+    .conoceIndex {
+        height: 230px;
+        color: #0a0908;
+
+        article {
+            @include sizesWH (100%, 80%);
+            left: 0;
+            top: 10%;
+            font-size: 14px;
+        }
+    }
+
+    .topProducts {
+        @include sizesWH (100%, auto);
+        left: 0;
+
+        article {
+            @include flex-column-center;
+
+            .imageProductCont {
+                @include sizesWH (310px, 290px);
+                padding: 0;
+
+                .imageProduct {
+                    @include sizesWH (310px, 290px);
+                }
+            }
+        }
+    }
+
+    .mapIndex {
+        display: none;
+    }
+}
+
+
+/* Tamaño tablet-Página nosotros */
+@media screen and (max-width:840px) {
+    .imageStory {
+        width: 390px;
+        height: 410px;
+    }
+}
+
+/* Tamaño celular página nosotros */
+@media screen and (max-width:500px) {
+    .contTus {
+        display: grid;
+        grid-template-rows: auto 320px auto;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+            "history history"
+            "imageStory imageStory"
+            "partners partners";
+
+        h2 {
+            background-color: #f9f7f3;
+            color: #0a0908;
+            text-align: center;
+        }
+    }
+
+    .contTus__image {
+        text-align: center;
+
+        .imageStory {
+            width: 300px;
+            height: 300px;
+        }
+    }
+}
+
+
+/* Tamaño tablet y celular, poco, ya que casi todo fué con bootstrap en el html */
+@media screen and (max-width:870px) {
+    .lgCarousel {
+        display: none;
+    }
+
+    .headingBottom {
+        font-size: 14px;
+    }
+
+    .imageProduct {
+        height: 290px;
+        width: 310px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .imageProduct {
+        height: 280px;
+        width: 280px;
+    }
+}
+
+
+/* Tamaño tablet-Página como comprar */
+@media screen and (max-width:840px) {
+    .contTsteps {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 460px;
+        grid-template-areas:
+            "howTo buy";
+        font-size: 13px;
+        text-align: left;
+
+        .contTsteps__buyProduct {
+            color: #0a0908;
+        }
+    }
+}
+
+/* Tamaño celular-Página como comprar */
+@media screen and (max-width:500px) {
+    .contTsteps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 480px auto;
+        grid-template-areas:
+            "howTo howTo"
+            "buy buy";
+        font-size: 12px;
+
+        .contTsteps__title {
+            background-color: #f9f7f3;
+            color: #0a0908;
+            text-align: center;
+        }
+
+        .contTsteps__section--style {
+            list-style-type: none;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+/* Tamaño tablet-Página contacto */
+@media screen and (max-width:840px) {
+    .contactT {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 30px auto 400px;
+        grid-template-areas:
+            "titl titl"
+            "info form"
+            "visit visit";
+    }
+
+    .contactT__title {
+        font-size: 15px;
+    }
+
+    .contactT__info__article {
+        width: auto;
+    }
+
+    .contactT__form__element--inrow {
+        width: 400px;
+    }
+
+    .contactT__visit--size {
+        width: 520px;
+        height: 390px;
+    }
+}
+
+/* Tamaño celular-Página contacto */
+@media screen and (max-width: 500px) {
+    .contactT {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 300px auto 350px;
+        row-gap: 5px;
+        grid-template-areas:
+            "titl"
+            "info"
+            "form"
+            "visit";
+    }
+
+    .contactT__title {
+        font-size: 15px;
+        width: 100%;
+        background-color: #f9f7f3;
+    }
+
+    .contactT__info__article {
+        width: 300px;
+        height: 140px
+    }
+
+    .contactT__info__article--sentence {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    form {
+        font-size: 13px;
+        padding: 0;
+
+        .contactT__form__element--inrow {
+            width: 300px;
+        }
+    }
+
+    .contactT__visit--size {
+        width: 300px;
+        height: 340px;
+    }
+}

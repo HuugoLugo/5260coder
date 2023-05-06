@@ -1,0 +1,122 @@
+/* página index  uso de positions y un poco de flex*/
+.mainIndex {
+    position: relative;
+    height: 515px;
+    background-color: #201d19;
+
+    section {
+        position: absolute;
+        left: 15%;
+        @include sizesWH (70%, 480px);
+        @include flex-row-center;
+    }
+}
+
+.conoceIndex {
+    position: relative;
+    @include sizesWH (80%, 150px);
+    left: 10%;
+    margin-bottom: 10px;
+
+    article {
+        position: absolute;
+        @include sizesWH (80%, 70%);
+        left: 10%;
+        top: 10%;
+        font-size: 15px;
+        text-align: justify;
+    }
+}
+
+.topProducts {
+    position: relative;
+    @include sizesWH (80%, 700px);
+    left: 10%;
+    text-align: center;
+
+    article {
+        @include flex-row-center;
+    }
+}
+
+.iframeDown {
+    position: relative;
+    @include sizesWH (90%, 450px);
+    @include flex-row-evenly;
+    left: 5%;
+}
+
+
+/* Tamaño tablet-Página inicio */
+@media screen and (max-width:840px) {
+    .mainIndex {
+        height: 470px;
+
+        section {
+            height: 440px;
+        }
+
+        .imageMain {
+            /* Aplicable a toda imagen dentro de un main */
+            @include sizesWH (510px, 420px);
+        }
+    }
+
+    .conoceIndex {
+        position: relative;
+        @include sizesWH (90%, 160px);
+        left: 5%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tamaño celular-Página inicio */
+@media screen and (max-width:500px) {
+    .mainIndex {
+        height: 400px;
+
+        section {
+            height: 370px;
+        }
+
+        .imageMain {
+            /* Aplicable a toda imagen dentro de un main */
+            @include sizesWH (310px, 350px);
+            margin: 3px;
+        }
+    }
+
+    .conoceIndex {
+        height: 230px;
+        color: #0a0908;
+
+        article {
+            @include sizesWH (100%, 80%);
+            left: 0;
+            top: 10%;
+            font-size: 14px;
+        }
+    }
+
+    .topProducts {
+        @include sizesWH (100%, auto);
+        left: 0;
+
+        article {
+            @include flex-column-center;
+
+            .imageProductCont {
+                @include sizesWH (310px, 290px);
+                padding: 0;
+
+                .imageProduct {
+                    @include sizesWH (310px, 290px);
+                }
+            }
+        }
+    }
+
+    .mapIndex {
+        display: none;
+    }
+}

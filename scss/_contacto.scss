@@ -1,0 +1,189 @@
+/* Página contacto usa grid y BEM, responsive, se mantiene header/footer de positions y bootstrap*/
+.contactT {
+    /* Contenedor grid página contacto formulario, info, visit*/
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 50px 460px 460px;
+    row-gap: 10px;
+    grid-template-areas:
+        "titl titl titl titl"
+        "info info form form"
+        "visit visit visit visit";
+    justify-items: center;
+    color: #0a0908;
+}
+
+.contactT__title {
+    grid-area: titl;
+    width: 50%;
+    text-align: center;
+    align-self: center;
+}
+
+.contactT__info {
+    grid-area: info;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contactT__info__article {
+    @include sizesWH (450px, 230px);
+    @include flex-column-evenly;
+}
+
+.contactT__info__article--sentence {
+    border-bottom: 1px groove #0a0908;
+    text-align: center;
+    font-size: 14px;
+    color: #0a0908
+}
+
+.contactT__form {
+    grid-area: form;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+form {
+    background-color: #4f000b;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+}
+
+.contactT__form__element--inrow {
+    width: 450px;
+    @include flex-row-between;
+    padding: 5px;
+    color: #f9f7f3;
+}
+
+input[type=text] {
+    border: 3px groove #0a0908;
+    background-color: transparent;
+    width: 75%;
+    color: #f9f7f3;
+}
+
+input[type=text]:focus {
+    background-color: #201d19;
+}
+
+input[type=email] {
+    border: 3px groove #0a0908;
+    background-color: transparent;
+    width: 75%;
+    color: #f9f7f3;
+}
+
+input[type=email]:focus {
+    background-color: #201d19;
+}
+
+input[type=reset] {
+    border: 3px groove #0a0908;
+    background-color: #201d19;
+    width: 35%;
+    color: #f9f7f3;
+}
+
+input[type=submit] {
+    border: 3px groove #0a0908;
+    background-color: #201d19;
+    width: 35%;
+    color: #f9f7f3;
+}
+
+select {
+    border: 3px groove #0a0908;
+    background-color: #201d19;
+    width: 40%;
+    color: #f9f7f3;
+    text-align: center;
+}
+
+.contactT__visit {
+    grid-area: visit;
+}
+
+.contactT__visit--size {
+    @include sizesWH (1000px, 450px);
+}
+
+@media screen and (max-width:1000px) {
+    .contactT__visit--size {
+        @include sizesWH (850px, 450px);
+    }
+}
+
+/* Tamaño tablet-Página contacto */
+@media screen and (max-width:840px) {
+    .contactT {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 30px auto 400px;
+        grid-template-areas:
+            "titl titl"
+            "info form"
+            "visit visit";
+    }
+
+    .contactT__title {
+        font-size: 15px;
+    }
+
+    .contactT__info__article {
+        width: auto;
+    }
+
+    .contactT__form__element--inrow {
+        width: 400px;
+    }
+
+    .contactT__visit--size {
+        @include sizesWH (520px, 390px);
+    }
+}
+
+/* Tamaño celular-Página contacto */
+@media screen and (max-width: 500px) {
+    .contactT {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 300px auto 350px;
+        row-gap: 5px;
+        grid-template-areas:
+            "titl"
+            "info"
+            "form"
+            "visit";
+    }
+
+    .contactT__title {
+        font-size: 15px;
+        width: 100%;
+        background-color: #f9f7f3;
+    }
+
+    .contactT__info__article {
+        @include sizesWH (300px, 140px);
+    }
+
+    .contactT__info__article--sentence {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    form {
+        font-size: 13px;
+        padding: 0;
+
+        .contactT__form__element--inrow {
+            width: 300px;
+        }
+    }
+
+    .contactT__visit--size {
+        @include sizesWH (300px, 340px);
+    }
+}

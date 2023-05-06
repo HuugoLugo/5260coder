@@ -1,0 +1,87 @@
+/* Página Nosotros*/
+.imageStory {
+    @include sizesWH (500px, 460px)
+}
+
+.contTus {
+    display: grid;
+    grid-template-rows: auto 150px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+        "history imageStory"
+        "partners partners";
+
+    .contTus__history {
+        grid-area: history;
+        padding: 10px;
+        background-color: #201d19;
+
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .contTus__image {
+        grid-area: imageStory;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contTus__partner {
+        grid-area: partners;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #463b2d;
+
+        article {
+            @include flex-row-center;
+        }
+    }
+
+    .contTus__partner--image {
+        @include sizesWH (60px, 60px);
+        margin: 5px;
+    }
+
+}
+
+/* Tamaño tablet-Página nosotros */
+@media screen and (max-width:840px) {
+    .imageStory {
+        @include sizesWH (360px, 410px);
+    }
+
+    .contTus__history {
+        p {
+            font-size: 13px;
+        }
+    }
+}
+
+/* Tamaño celular página nosotros */
+@media screen and (max-width:500px) {
+    .contTus {
+        display: grid;
+        grid-template-rows: auto 320px auto;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+            "history history"
+            "imageStory imageStory"
+            "partners partners";
+
+        h2 {
+            background-color: #f9f7f3;
+            color: #0a0908;
+            text-align: center;
+        }
+    }
+
+    .contTus__image {
+        text-align: center;
+
+        .imageStory {
+            @include sizesWH (300px, 300px);
+        }
+    }
+}

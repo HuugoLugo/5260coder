@@ -1,0 +1,307 @@
+@import "variables";
+@import "inicio";
+@import "nosotros";
+@import "productos";
+@import "como-pedir";
+@import "contacto";
+
+/* Se usan en todo el sitio (o casi todo)  html, body, header, footer*/
+* {
+    /* Reseteo CSS, border box-permite que el contenedor mantenga el tamaño que le damos */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Hace que el valor de 1rem=10px, ya que por default es 16px */
+    font-size: 62.5%;
+}
+
+body {
+    /* Tipo de fuente a usar, es externa, y de no poder se usa sans-serif, recuerda se prioriza id-class-tag*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #adc178;
+    color: #f9f7f3;
+}
+
+a {
+    text-decoration: none;
+    color: #f9f7f3;
+}
+
+.headingBottom {
+    /* aplicable a todos los "h" que esten en la parte baja del contenedor */
+    @include sizesWH (50%, 25px);
+    @include headingStyle;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    font-size: 16px;
+}
+
+.headingTop {
+    /* aplicable a todos los "h" que esten en la parte alta del contenedor */
+    @include sizesWH (30%, 25px);
+    @include headingStyle;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    font-size: 19px;
+}
+
+.imageMain {
+    /* Aplicable a toda imagen dentro de un main */
+    @include sizesWH (800px, 450px);
+    margin: 5px 10px;
+}
+
+// SIEMPRE NO LO USÉ.imageMainCont {
+//     @include sizesWH (820px, 460px);
+//     background-color: #f9f7f3;
+// }
+
+.imageProduct {
+    /* Aplicable a toda imagen de producto */
+    @include sizesWH (330px, 310px);
+    text-align: center;
+}
+
+.imageProductCont {
+    /* Aplicable a todo contenedor de imagen de producto */
+    position: relative;
+    display: inline-block;
+    @include sizesWH (340px, 320px);
+    padding: 5px;
+    background-color: #f9f7f3;
+    margin: 5px 5px;
+}
+
+.logoMini {
+    /* Son todos los logos chiquitos, de redes sociales, contacto */
+    @include sizesWH (30px, 30px);
+    margin: 5px;
+}
+
+.communicateMedia {
+    /* Aquí están contenidos los mini logos de comunicación */
+    position: absolute;
+    @include sizesWH (20%, 50%);
+    @include flex-row-end;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+/* HEADER */
+    .logoHeader {
+        /* Aplicable a la imagen del logo del negocio en el header */
+        @include sizesWH (120px, 120px);
+    }
+
+.headerCont {
+    /* Encabezado */
+    position: relative;
+    @include sizesWH (100%, 140px);
+    background-color: #4f000b;
+
+    .logoHeaderCont {
+        /* Donde está contenida la imagen del logo del negocio en el header */
+        position: absolute;
+        @include sizesWH (15%, 100%);
+        top: 0;
+        left: 0;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .pageTitle {
+        /* Título, nombre del negocio */
+        font-family: 'Delicious Handrawn', 'Poppins', sans-serif;
+        font-size: 50px;
+        position: absolute;
+        @include sizesWH (60%, 50%);
+        padding-top: 10px;
+        left: 20%;
+        text-align: center;
+    }
+
+    .navigator {
+        /* navegador */
+        position: absolute;
+        @include sizesWH (70%, 30%);
+        top: 55%;
+        left: 15%;
+        text-align: center;
+        font-size: 18px;
+
+        .nav {
+            /* bootstrap clases header */
+            justify-content: space-evenly;
+        }
+
+        .nav-item {
+            background-color: #4f000b;
+        }
+
+        .nav-link {
+            color: #f9f7f3;
+            padding: 3px 4px;
+        }
+    }
+}
+
+/* FOOTER */
+.footerCont {
+    position: relative;
+    @include sizesWH (100%, 130px);
+    background-color: #0a0908;
+    font-size: 15px;
+}
+
+.contactFooter {
+    /* Contactanos y horario de atención en footer */
+    position: absolute;
+    @include sizesWH (20%, 50%);
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.logoFooterCont {
+    /* Donde está contenida la imagen del logo del negocio en el footer */
+    position: absolute;
+    @include sizesWH (60%, 70%);
+    top: 0;
+    left: 20%;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.logoFooter {
+    /* Aplicable a la imagen del logo del negocio en el footer */
+    @include sizesWH (75px, 75px);
+    margin: 5px;
+}
+
+.copyrightAutor {
+    /* Copyright en footer */
+    position: absolute;
+    @include sizesWH (100%, 30%);
+    bottom: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    border-top-style: groove;
+    border-top-color: gray;
+}
+
+/* Tamaño tablet aplicable a todo el sitio */
+@media screen and (max-width:840px) {
+
+    .imageProduct {
+        height: 290px;
+        width: 310px;
+    }
+    .logoMini {
+        height: 21px;
+        width: 21px;
+    }
+
+    /* HEADER */
+    .logoHeader {
+        height: 70px;
+        width: 70px;
+    }
+
+    .headerCont {
+        height: 100px;
+
+        .pageTitle {
+            font-size: 30px;
+        }
+
+        .navigator {
+            font-size: 10px;
+            width: 80%;
+        }
+    }
+
+    /* FOOTER */
+    .logoFooter {
+        height: 65px;
+        width: 65px;
+    }
+}
+
+/* Tamaño celular aplicable a todo el sitio */
+@media screen and (max-width:500px) {
+
+    /* HEADER */
+    .headerCont {
+        height: 80px;
+
+        .logoHeaderCont {
+            display: none;
+        }
+
+        .pageTitle {
+            font-size: 19px;
+            left: 0;
+            width: 60%;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .logoMini {
+            height: 18px;
+            width: 18px;
+        }
+
+        .navigator {
+            font-size: 9.5px;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    /* FOOTER */
+    .footerCont {
+        font-size: 10px;
+
+        .contactFooter {
+            top: 30%;
+            left: 50%;
+            height: 40%;
+            width: 50%;
+            text-align: right;
+            padding-top: 0;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .communicateMedia {
+            width: 50%;
+            height: 30%;
+        }
+
+        .logoMini {
+            height: 18px;
+            width: 18px;
+        }
+
+        .logoFooterCont {
+            left: 0;
+            width: 50%;
+            height: 50%;
+            text-align: left;
+        }
+
+        .logoFooter {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}

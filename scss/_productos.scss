@@ -1,0 +1,49 @@
+/* Página Productos */
+/* clases bootstrap */
+.container-fluid {
+    position: relative;
+    height: 420px;
+    @include flex-row-evenly;
+    align-items: center;
+
+    .carousel-indicators {
+        bottom: -20px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .col-lg-4,
+    .col-md-6,
+    .col-sm-10 {
+        position: relative;
+        text-align: center;
+    }
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+    }
+
+}
+
+/* Tamaño tablet y celular, poco, ya que casi todo fué con bootstrap en el html */
+@media screen and (max-width:870px) {
+    .lgCarousel {
+        display: none;
+    }
+
+    .headingBottom {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .imageProduct {
+        @include sizesWH (280px, 280px);
+    }
+}

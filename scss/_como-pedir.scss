@@ -1,0 +1,73 @@
+/* Página como comprar, usa grid, se responsive */
+.contTsteps {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 500px;
+    grid-template-areas:
+        "howTo howTo buy";
+    font-size: 15px;
+    text-align: justify;
+
+    .contTsteps__how {
+        grid-area: howTo;
+        @include flex-column-between;
+        background-color: #201d19;
+        padding: 10px;
+    }
+
+    .contTsteps__section--style {
+        border-top: 1px groove #0a0908;
+
+        a {
+            text-decoration-line: underline;
+        }
+    }
+
+    .contTsteps__buyProduct {
+        grid-area: buy;
+        @include flex-column-between;
+        padding: 10px;
+    }
+}
+
+/* Tamaño tablet-Página como comprar */
+@media screen and (max-width:840px) {
+    .contTsteps {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 460px;
+        grid-template-areas:
+            "howTo buy";
+        font-size: 13px;
+        text-align: left;
+
+        .contTsteps__buyProduct {
+            color: #0a0908;
+        }
+    }
+}
+
+/* Tamaño celular-Página como comprar */
+@media screen and (max-width:500px) {
+    .contTsteps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 480px auto;
+        grid-template-areas:
+            "howTo howTo"
+            "buy buy";
+        font-size: 12px;
+
+        .contTsteps__title {
+            background-color: #f9f7f3;
+            color: #0a0908;
+            text-align: center;
+        }
+
+        .contTsteps__section--style {
+            list-style-type: none;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}

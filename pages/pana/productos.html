@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head> <!-- No se ve en el sitio, son las configuraciones y comunicación -->
     <meta charset="UTF-8">
@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos Panaderia Nancy</title>
     <link rel="shortcut icon" href="../../media/pana/logoPanaderiaNancy.ico" type="image/x-icon">
+    <meta name="description" content="Panadería Nancy es un negocio familiar dedicado a la elaboración de pan blanco, pan 
+    de dulce, y pasteles, se encuentra ubicado en Gpe. N.L.">
+    <meta name="keywords"
+        content="Panadería Nancy, panadería en guadalupe, pastelería en guadalupe, pasteles con imagen, pasteles navideños, pan hamburguesa, pan chilidog">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,8 +18,9 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/stylesPana.css">
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
+
 <!--El contenido de la página inicia-->
 
 <body>
@@ -23,8 +28,7 @@
         <a class="logoHeaderCont" href="../../index.html"><img src="../../media/pana/logoPanaderiaNancy.png"
                 alt="logoPanaderiaNancy" title="logoNegocio" class="logoHeader"></a>
         <a href="../../index.html">
-            <h1 class="pageTitle">Panadería Nancy</h1>
-        </a>
+            <h1 class="pageTitle">Panadería Nancy</h1></a>
         <div class="communicateMedia">
             <a href="https://www.facebook.com/PanaderiaNANCY/" target="_blank"><img src="../../media/pana/logoFB1.png"
                     alt="logoFB" title="FB" class="logoMini"></a>
@@ -48,113 +52,684 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.html">CONTACTO</a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li> -->
             </ul>
         </nav>
-
-        <!-- <div class="btn-group">
-            <a href="productos.html#extras"><button type="button" class="btn btn-light">EXTRAS</button></a>
-            <a href="productos.html#panaderia"><button type="button" class="btn btn-light">PANADERIA</button></a>
-
-            <a href="productos.html#especiales"><button type="button" class="btn btn-light">ESPECIALES</button></a>
-            <a href="productos.html#pasteleria"><button type="button" class="btn btn-light">PASTELERIA</button></a>
-            UN SUBMENU O DESPLEGABLE <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href=""></a></li>
-              <li><a class="dropdown-item" href=""></a></li>
-            </ul>
-        </div> -->
-
     </header>
-    <div class="contTproducts">
-        <section id="especiales">
-            <h1 class="headingTop">Especiales</h1>
-            <div class="imageProductCont">
-                <img src="../../media/pana/especialNavidadQueco.jpeg" alt="especialNavidadQueco" title="navidadQueco"
-                    class="imageProduct">
-                <h2 class="headingBottom">Navidad</h2>
+
+
+    <!-- Inicia sección especiales  2 carousel-->
+    <section id="especiales" class="container-fluid">
+        <h2 class="headingTop">Especiales</h2>
+        <div class="d-none d-md-block"> <!-- Inicia tamaño lg-md sección especiales, se quitaron indicadores -->
+            <div id="especialesLgMd" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/especialNavidadQueco.PNG" alt="especialNavidadQueco"
+                                    title="navidadQueco" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Navidad</h3>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/especialEventoXVRoseton.jpeg" alt="especialPastelFiesta"
+                                    title="xvPastel" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">XV</h3>
+                            </div>
+                            <div class="lgCarousel">
+                                <div class=" col-md-0 col-lg-4">
+                                    <img src="../../media/pana/especialBautizoQueco.PNG" alt="especialBautizoQueco"
+                                        title="bautizoQueco" class="imageProduct" class="d-block w-100">
+                                    <h3 class="headingBottom">Bautizo</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/especialReyesRosca2.PNG" alt="especialReyesRosca"
+                                    title="reyesRosca" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Día Reyes</h3>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/especialMuertosPan.jpeg" alt="especialMuertosPan"
+                                    title="muertoPan" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Día Muertos</h3>
+                            </div>
+                            <div class="lgCarousel">
+                                <div class=" col-md-0 col-lg-4">
+                                    <img src="../../media/pana/especialEventoOrgQueco.jpeg" alt="especialEventoOrgQueco"
+                                        title="futbolQuecos" class="imageProduct" class="d-block w-100">
+                                    <h3 class="headingBottom">Partidos</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Termina inner  -->
+            </div> <!-- Termina carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#especialesLgMd" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#especialesLgMd" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño lg-md sección especiales-->
+
+        <!-- Inicia tamaño sm sección especiales -->
+        <div class="d-block d-md-none">
+            <div id="especialesSm" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#especialesSm" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#especialesSm" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#especialesSm" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#especialesSm" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#especialesSm" data-bs-slide-to="4"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#especialesSm" data-bs-slide-to="5"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/especialNavidadQueco.PNG" alt="especialNavidadQueco"
+                                title="navidadQueco" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Navidad</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/especialEventoXVRoseton.jpeg" alt="especialPastelFiesta"
+                                title="xvPastel" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">XV</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/especialBautizoQueco.PNG" alt="especialBautizoQueco"
+                                title="bautizoQueco" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Bautizo</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/especialReyesRosca2.PNG" alt="especialReyesRosca"
+                                title="reyesRosca" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Día Reyes</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/especialMuertosPan.jpeg" alt="especialMuertosPan"
+                                title="muertoPan" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Día Muertos</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/especialEventoOrgQueco.jpeg" alt="especialEventoOrgQueco"
+                                title="futbolQuecos" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Partidos</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Termina carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#especialesSm" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#especialesSm" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño sm -->
+    </section> <!-- Termina sección especiales -->
+
+
+    <!-- Inicia sección panaderia, 3 carousel, 1 cada tamaño-->
+    <section id="panaderia" class="container-fluid">
+        <h2 class="headingTop">Panadería</h2>
+        <div class="d-none d-lg-block"> <!-- Inicia tamaño lg sección panadería -->
+            <div id="panaderiaLg" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#panaderiaLg" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#panaderiaLg" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulceConcha.jpeg" alt="dulcePanConcha" title="panConcha"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Concha</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulceGalletas.PNG" alt="dulceGalletas" title="galletas"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Galletas</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulceDona.jpeg" alt="dulcePanDona" title="panDona"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Dona</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/blancoChilidog2.PNG" alt="blancoPanChilidog"
+                                    title="panChilidog" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Chilidog</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulcePiña.jpeg" alt="dulcePiña" title="piña"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Piña</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/blancoHamburguesa2.jpeg" alt="blancoPanHamburguesa"
+                                    title="panHamburguesa" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Hamburguesa</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- acaba inner -->
             </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/especialReyesRosca2.PNG" alt="especialReyesRosca" title="reyesRosca"
-                    class="imageProduct">
-                <h2 class="headingBottom">Reyes</h2>
+            <button class="carousel-control-prev" type="button" data-bs-target="#panaderiaLg" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#panaderiaLg" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño lg -->
+
+        <div class="d-none d-md-block d-lg-none"><!-- inicia carousel tamaño md, se cambió el id para que funcionen los botones-->
+            <div id="panaderiaMd" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#panaderiaMd" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#panaderiaMd" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#panaderiaMd" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulceConcha.jpeg" alt="dulcePanConcha" title="panConcha"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Concha</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulceGalletas.PNG" alt="dulceGalletas" title="galletas"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Galletas</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulceDona.jpeg" alt="dulcePanDona" title="panDona"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Dona</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/blancoChilidog2.PNG" alt="blancoPanChilidog"
+                                    title="panChilidog" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Chilidog</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/dulcePiña.jpeg" alt="dulcePiña" title="piña"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Piña</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/blancoHamburguesa2.jpeg" alt="blancoPanHamburguesa"
+                                    title="panHamburguesa" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Hamburguesa</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Termina inner -->
             </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/especialBautizoQueco.PNG" alt="especialBautizoQueco" title="bautizoQueco"
-                    class="imageProduct">
-                <h2 class="headingBottom">Bautizo</h2>
+            <button class="carousel-control-prev" type="button" data-bs-target="#panaderiaMd" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#panaderiaMd" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño md sección panadería-->
+
+        <div class="d-block d-md-none"> <!-- Inicia tamaño sm sección panadería -->
+            <div id="panaderiaSm" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#panaderiaSm" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#panaderiaSm" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#panaderiaSm" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#panaderiaSm" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#panaderiaSm" data-bs-slide-to="4"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#panaderiaSm" data-bs-slide-to="5"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/dulceConcha.jpeg" alt="dulcePanConcha" title="panConcha"
+                                class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Concha</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/dulceGalletas.PNG" alt="dulceGalletas" title="galletas"
+                                class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Galletas</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/dulceDona.jpeg" alt="dulcePanDona" title="panDona"
+                                class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Dona</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/blancoChilidog2.PNG" alt="blancoPanChilidog" title="panChilidog"
+                                class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Chilidog</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/dulcePiña.jpeg" alt="dulcePiña" title="piña" class="imageProduct"
+                                class="d-block w-100">
+                            <h3 class="headingBottom">Piña</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/blancoHamburguesa2.jpeg" alt="blancoPanHamburguesa"
+                                title="panHamburguesa" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Hamburguesa</h3>
+                        </div>
+                    </div>
+                </div> <!-- Termina inner -->
             </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/especialEventoXVRoseton.jpeg" alt="especialPastelFiesta" title="pastelXv"
-                    class="imageProduct">
-                <h2 class="headingBottom">XV</h2>
+            <button class="carousel-control-prev" type="button" data-bs-target="#panaderiaSm" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#panaderiaSm" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño sm sección panadería -->
+    </section> <!-- Termina sección panadería -->
+
+
+    <!-- Inicia sección pastelería, se hará igual que en sección panadería -->
+    <section class="container-fluid">
+        <h2 class="headingTop">Pastelería</h2>
+        <div class="d-none d-lg-block"> <!-- Inicia tamaño lg sección pastelería -->
+            <div id="pasteleria" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#pasteleria" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#pasteleria" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/redondoNopuedeser.PNG" alt="pastelRedondoNopuedeser"
+                                    title="pastelPerro" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Bromas</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/redondoPawPatrowl2pisos.jpeg"
+                                    alt="pastelRedondoPawPatrowl2pisos" title="pastelPawPatrowl" class="imageProduct"
+                                    class="d-block w-100">
+                                <h3 class="headingBottom">2 Pisos</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/rosetonMariobros.PNG" alt="pastelRosetonesMarioBros"
+                                    title="pastelMarioBros" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Rosetones</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/pastelQuequitos.PNG" alt="pastelQuequitos"
+                                    title="pastelQuequitos" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Pastel Quequitos</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/redondoTresLechesChocolate.PNG" alt="pastelRedondo3leches"
+                                    title="pastel3leches" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">3 Leches</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/planchaRayados.jpeg" alt="pastelPlanchaRayados"
+                                    title="pastelEquipoFutbol" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Plancha</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Termina carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#pasteleria" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pasteleria" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño lg sección pastelería -->
+
+        <div class="d-none d-md-block d-lg-none"> <!-- Inicia tamaño md sección pastelería -->
+            <div id="pasteleriaMd" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#pasteleriaMd" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#pasteleriaMd" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#pasteleriaMd" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/redondoNopuedeser.PNG" alt="pastelRedondoNopuedeser"
+                                    title="pastelPerro" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Bromas</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/redondoPawPatrowl2pisos.jpeg"
+                                    alt="pastelRedondoPawPatrowl2pisos" title="pastelPawPatrowl" class="imageProduct"
+                                    class="d-block w-100">
+                                <h3 class="headingBottom">2 Pisos</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/rosetonMariobros.PNG" alt="pastelRosetonesMarioBros"
+                                    title="pastelMarioBros" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Rosetones</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/pastelQuequitos.PNG" alt="pastelQuequitos"
+                                    title="pastelQuequitos" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Pastel Quequitos</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/redondoTresLechesChocolate.PNG" alt="pastelRedondo3leches"
+                                    title="pastel3leches" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">3 Leches</h3>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <img src="../../media/pana/planchaRayados.jpeg" alt="pastelPlanchaRayados"
+                                    title="pastelEquipoFutbol" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Plancha</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Termina inner -->
             </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/especialEventoDonitas.jpeg" alt="especialDonitas" title="donitas"
-                    class="imageProduct">
-                <h2 class="headingBottom">Donitas</h2>
-            </div>
-        </section>
-        <section id="panaderia">
-            <h1 class="headingTop">Panadería</h1>
-            <div class="imageProductCont">
-                <img src="../../media/pana/dulceDona.jpeg" alt="dulceDona" title="panDona" class="imageProduct">
-                <h2 class="headingBottom">Pan Dulce</h2>
-            </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/blancoHamburguesa2.jpeg" alt="blancoHamburguesa" title="panHamburguesa"
-                    class="imageProduct">
-                <h2 class="headingBottom">Pan Blanco</h2>
-            </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/dulceGalletas.PNG" alt="dulceGalletas" title="galletas" class="imageProduct">
-                <h2 class="headingBottom">Galletas</h2>
-            </div>
-        </section>
-        <section id="pasteleria">
-            <h1 class="headingTop">Pastelería</h1>
-            <div class="imageProductCont">
-                <img src="../../media/pana/redondoNopuedeser.PNG" alt="pastelRedondoNopuedeser" title="pastelPerro"
-                    class="imageProduct">
-                <h2 class="headingBottom">Redondo</h2>
-            </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/planchaRayados.jpeg" alt="pastelPlanchaRayados" title="pastelRayados"
-                    class="imageProduct">
-                <h2 class="headingBottom">Plancha</h2>
-            </div>
-            <div class="imageProductCont">
-                <img src="../../media/pana/pastelQuequitos.PNG" alt="pastel2pisosPawpatrol" title="pastelPawpatrol"
-                    class="imageProduct">
-                <h2 class="headingBottom">2 Pisos</h2>
-            </div>
-        </section>
-        <section id="extras">
-            <h1 class="headingTop">Extras</h1>
-            <div class="imageProductCont">
-                <h2 class="headingBottom"></h2>
-            </div>
-            <div class="imageProductCont">
-                <h2 class="headingBottom"></h2>
-            </div>
-            <div class="imageProductCont">
-                <h2 class="headingBottom"></h2>
-            </div>
-        </section>
-    </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#pasteleriaMd" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pasteleriaMd" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño md sección pastelería-->
+
+        <div class="d-block d-md-none"> <!-- Inicia tamaño sm sección pastelería  -->
+            <div id="pasteleriaSm" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#pasteleriaSm" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#pasteleriaSm" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#pasteleriaSm" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#pasteleriaSm" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#pasteleriaSm" data-bs-slide-to="4"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#pasteleriaSm" data-bs-slide-to="5"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/redondoNopuedeser.PNG" alt="pastelRedondoNopuedeser"
+                                title="pastelPerro" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Bromas</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/redondoPawPatrowl2pisos.jpeg" alt="pastelRedondoPawPatrowl2pisos"
+                                title="pastelPawPatrowl" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">2 Pisos</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/rosetonMariobros.PNG" alt="pastelRosetonesMarioBros"
+                                title="pastelMarioBros" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Rosetones</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/pastelQuequitos.PNG" alt="pastelQuequitos"
+                                title="pastelQuequitos" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Pastel Quequitos</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/redondoTresLechesChocolate.PNG" alt="pastelRedondo3leches"
+                                title="pastel3leches" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">3 Leches</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/planchaRayados.jpeg" alt="pastelPlanchaRayados"
+                                title="pastelEquipoFutbol" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Plancha</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Termina carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#pasteleriaSm" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pasteleriaSm" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño sm sección pastelería -->
+    </section> <!-- Termina sección pastelería -->
+
+
+    <!-- Inicia sección extras, se hará como la sección especiales -->
+    <section class="container-fluid">
+        <h2 class="headingTop">Extras</h2>
+        <div class="d-none d-md-block"> <!-- Inicia tamaño lg-md sección extras -->
+            <div id="extras" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/extraMiniPastel.PNG" alt="extraMiniPastel" title="pastelMini"
+                                    class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Mini Pastel</h3>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/extraRoscaChoconuez.PNG" alt="extraRoscaChoconuez"
+                                    title="roscaChoconuez" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Rosca Chocolate</h3>
+                            </div>
+                            <div class="lgCarousel">
+                                <div class="col-md-6 col-lg-4">
+                                    <img src="../../media/pana/extraQuequito.PNG" alt="extraQuequito" title="quequitos"
+                                        class="imageProduct" class="d-block w-100">
+                                    <h3 class="headingBottom">Quequito</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/extraVasitoTresLeches.PNG" alt="extraVaso3leches"
+                                    title="vaso3leches" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Vasito 3 Leches</h3>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <img src="../../media/pana/extraManteconchas.PNG" alt="extraManteconchas"
+                                    title="manteconcha" class="imageProduct" class="d-block w-100">
+                                <h3 class="headingBottom">Manteconcha</h3>
+                            </div>
+                            <div class="lgCarousel">
+                                <div class="col-md-0 col-lg-4">
+                                    <img src="../../media/pana/extraDonitas.jpeg" alt="extraDonitas" title="donaMini"
+                                        class="imageProduct" class="d-block w-100">
+                                    <h3 class="headingBottom">Mini Dona</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Termina carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#extras" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#extras" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño lg-md sección extras -->
+
+        <div class="d-block d-md-none"> <!-- Inicia tamaño sm sección extras  -->
+            <div id="extrasSm" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#extrasSm" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#extrasSm" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#extrasSm" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#extrasSm" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#extrasSm" data-bs-slide-to="4" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#extrasSm" data-bs-slide-to="5" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/extraMiniPastel.PNG" alt="extraMiniPastel" title="pastelMini"
+                                class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Mini Pastel</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/extraRoscaChoconuez.PNG" alt="extraRoscaChoconuez"
+                                title="roscaChoconuez" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Rosca Chocolate</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/extraQuequito.PNG" alt="extraQuequito" title="quequitos"
+                                class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Quequito</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/extraVasitoTresLeches.PNG" alt="extraVaso3leches"
+                                title="vaso3leches" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Vasito 3 Leches</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/extraManteconchas.PNG" alt="extraManteconchas"
+                                title="manteconcha" class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Manteconcha</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-sm-10">
+                            <img src="../../media/pana/extraDonitas.jpeg" alt="extraDonitas" title="donaMini"
+                                class="imageProduct" class="d-block w-100">
+                            <h3 class="headingBottom">Mini Dona</h3>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Termina carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#extrasSm" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#extrasSm" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Despues</span>
+            </button>
+        </div> <!-- Termina tamaño sm sección extras -->
+    </section> <!-- Termina sección extras -->
+
+
     <!--Pie de página con redes sociales, horario, logo, contacto-->
     <footer class="footerCont">
         <div class="contactFooter">
-            <p><a href="contacto.html">Contáctenos</a><!--<hr> ahorita no--></p>
+            <p><a href="contacto.html">Contáctenos</a></p>
             <p>8:00-18:00</p>
         </div>
         <div class="logoFooterCont">
-            <img src="../../media/pana/logoPanaderiaNancy.png" alt="logoPanaderiaNancy" title="logo" class="logoFooter">
-            </article>
+            <a href="../../index.html"><img src="../../media/pana/logoPanaderiaNancy.png" alt="logoPanaderiaNancy"
+                    title="logo" class="logoFooter"></a>
         </div>
         <div class="communicateMedia">
             <a href="https://wa.me/qr/" target="_blank"><img src="../../media/pana/logoWhatsapp.png" alt="logoWhatsapp"

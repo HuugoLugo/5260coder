@@ -1,0 +1,790 @@
+@charset "UTF-8";
+/* página index  uso de positions y un poco de flex*/
+.mainIndex {
+  position: relative;
+  height: 515px;
+  background-color: #201d19;
+}
+.mainIndex section {
+  position: absolute;
+  left: 15%;
+  width: 70%;
+  height: 480px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.conoceIndex {
+  position: relative;
+  width: 80%;
+  height: 150px;
+  left: 10%;
+  margin-bottom: 10px;
+}
+.conoceIndex article {
+  position: absolute;
+  width: 80%;
+  height: 70%;
+  left: 10%;
+  top: 10%;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.topProducts {
+  position: relative;
+  width: 80%;
+  height: 700px;
+  left: 10%;
+  text-align: center;
+}
+.topProducts article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.iframeDown {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  left: 5%;
+}
+
+/* Tamaño tablet-Página inicio */
+@media screen and (max-width: 840px) {
+  .mainIndex {
+    height: 470px;
+  }
+  .mainIndex section {
+    height: 440px;
+  }
+  .mainIndex .imageMain {
+    /* Aplicable a toda imagen dentro de un main */
+    width: 510px;
+    height: 420px;
+  }
+  .conoceIndex {
+    position: relative;
+    width: 90%;
+    height: 160px;
+    left: 5%;
+    margin-bottom: 10px;
+  }
+}
+/* Tamaño celular-Página inicio */
+@media screen and (max-width: 500px) {
+  .mainIndex {
+    height: 400px;
+  }
+  .mainIndex section {
+    height: 370px;
+  }
+  .mainIndex .imageMain {
+    /* Aplicable a toda imagen dentro de un main */
+    width: 310px;
+    height: 350px;
+    margin: 3px;
+  }
+  .conoceIndex {
+    height: 230px;
+    color: #0a0908;
+  }
+  .conoceIndex article {
+    width: 100%;
+    height: 80%;
+    left: 0;
+    top: 10%;
+    font-size: 14px;
+  }
+  .topProducts {
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  .topProducts article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .topProducts article .imageProductCont {
+    width: 310px;
+    height: 290px;
+    padding: 0;
+  }
+  .topProducts article .imageProductCont .imageProduct {
+    width: 310px;
+    height: 290px;
+  }
+  .mapIndex {
+    display: none;
+  }
+}
+/* Página Nosotros*/
+.imageStory {
+  width: 500px;
+  height: 460px;
+}
+
+.contTus {
+  display: grid;
+  grid-template-rows: auto 150px;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas: "history imageStory" "partners partners";
+}
+.contTus .contTus__history {
+  grid-area: history;
+  padding: 10px;
+  background-color: #201d19;
+}
+.contTus .contTus__history p {
+  margin-bottom: 2rem;
+}
+.contTus .contTus__image {
+  grid-area: imageStory;
+  padding: 10px;
+  text-align: center;
+}
+.contTus .contTus__partner {
+  grid-area: partners;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #463b2d;
+}
+.contTus .contTus__partner article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.contTus .contTus__partner--image {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+}
+
+/* Tamaño tablet-Página nosotros */
+@media screen and (max-width: 840px) {
+  .imageStory {
+    width: 360px;
+    height: 410px;
+  }
+  .contTus__history p {
+    font-size: 13px;
+  }
+}
+/* Tamaño celular página nosotros */
+@media screen and (max-width: 500px) {
+  .contTus {
+    display: grid;
+    grid-template-rows: auto 320px auto;
+    grid-column: 1fr 1fr;
+    grid-template-areas: "history history" "imageStory imageStory" "partners partners";
+  }
+  .contTus h2 {
+    background-color: #f9f7f3;
+    color: #0a0908;
+    text-align: center;
+  }
+  .contTus__image {
+    text-align: center;
+  }
+  .contTus__image .imageStory {
+    width: 300px;
+    height: 300px;
+  }
+}
+/* Página Productos */
+/* clases bootstrap */
+.container-fluid {
+  position: relative;
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container-fluid .carousel-indicators {
+  bottom: -20px;
+}
+.container-fluid .row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.container-fluid .col-lg-4,
+.container-fluid .col-md-6,
+.container-fluid .col-sm-10 {
+  position: relative;
+  text-align: center;
+}
+.container-fluid .carousel-control-prev,
+.container-fluid .carousel-control-next {
+  width: 5%;
+}
+
+/* Tamaño tablet y celular, poco, ya que casi todo fué con bootstrap en el html */
+@media screen and (max-width: 870px) {
+  .lgCarousel {
+    display: none;
+  }
+  .headingBottom {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .imageProduct {
+    width: 280px;
+    height: 280px;
+  }
+}
+/* Página como comprar, usa grid, se responsive */
+.contTsteps {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 500px;
+  grid-template-areas: "howTo howTo buy";
+  font-size: 15px;
+  text-align: justify;
+}
+.contTsteps .contTsteps__how {
+  grid-area: howTo;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #201d19;
+  padding: 10px;
+}
+.contTsteps .contTsteps__section--style {
+  border-top: 1px groove #0a0908;
+}
+.contTsteps .contTsteps__section--style a {
+  text-decoration-line: underline;
+}
+.contTsteps .contTsteps__buyProduct {
+  grid-area: buy;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Tamaño tablet-Página como comprar */
+@media screen and (max-width: 840px) {
+  .contTsteps {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 460px;
+    grid-template-areas: "howTo buy";
+    font-size: 13px;
+    text-align: left;
+  }
+  .contTsteps .contTsteps__buyProduct {
+    color: #0a0908;
+  }
+}
+/* Tamaño celular-Página como comprar */
+@media screen and (max-width: 500px) {
+  .contTsteps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 480px auto;
+    grid-template-areas: "howTo howTo" "buy buy";
+    font-size: 12px;
+  }
+  .contTsteps .contTsteps__title {
+    background-color: #f9f7f3;
+    color: #0a0908;
+    text-align: center;
+  }
+  .contTsteps .contTsteps__section--style {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* Página contacto usa grid y BEM, responsive, se mantiene header/footer de positions y bootstrap*/
+.contactT {
+  /* Contenedor grid página contacto formulario, info, visit*/
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 50px 460px 460px;
+  row-gap: 10px;
+  grid-template-areas: "titl titl titl titl" "info info form form" "visit visit visit visit";
+  justify-items: center;
+  color: #0a0908;
+}
+
+.contactT__title {
+  grid-area: titl;
+  width: 50%;
+  text-align: center;
+  align-self: center;
+}
+
+.contactT__info {
+  grid-area: info;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contactT__info__article {
+  width: 450px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contactT__info__article--sentence {
+  border-bottom: 1px groove #0a0908;
+  text-align: center;
+  font-size: 14px;
+  color: #0a0908;
+}
+
+.contactT__form {
+  grid-area: form;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+form {
+  background-color: #4f000b;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px;
+}
+
+.contactT__form__element--inrow {
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 5px;
+  color: #f9f7f3;
+}
+
+input[type=text] {
+  border: 3px groove #0a0908;
+  background-color: transparent;
+  width: 75%;
+  color: #f9f7f3;
+}
+
+input[type=text]:focus {
+  background-color: #201d19;
+}
+
+input[type=email] {
+  border: 3px groove #0a0908;
+  background-color: transparent;
+  width: 75%;
+  color: #f9f7f3;
+}
+
+input[type=email]:focus {
+  background-color: #201d19;
+}
+
+input[type=reset] {
+  border: 3px groove #0a0908;
+  background-color: #201d19;
+  width: 35%;
+  color: #f9f7f3;
+}
+
+input[type=submit] {
+  border: 3px groove #0a0908;
+  background-color: #201d19;
+  width: 35%;
+  color: #f9f7f3;
+}
+
+select {
+  border: 3px groove #0a0908;
+  background-color: #201d19;
+  width: 40%;
+  color: #f9f7f3;
+  text-align: center;
+}
+
+.contactT__visit {
+  grid-area: visit;
+}
+
+.contactT__visit--size {
+  width: 1000px;
+  height: 450px;
+}
+
+@media screen and (max-width: 1000px) {
+  .contactT__visit--size {
+    width: 850px;
+    height: 450px;
+  }
+}
+/* Tamaño tablet-Página contacto */
+@media screen and (max-width: 840px) {
+  .contactT {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 30px auto 400px;
+    grid-template-areas: "titl titl" "info form" "visit visit";
+  }
+  .contactT__title {
+    font-size: 15px;
+  }
+  .contactT__info__article {
+    width: auto;
+  }
+  .contactT__form__element--inrow {
+    width: 400px;
+  }
+  .contactT__visit--size {
+    width: 520px;
+    height: 390px;
+  }
+}
+/* Tamaño celular-Página contacto */
+@media screen and (max-width: 500px) {
+  .contactT {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 300px auto 350px;
+    row-gap: 5px;
+    grid-template-areas: "titl" "info" "form" "visit";
+  }
+  .contactT__title {
+    font-size: 15px;
+    width: 100%;
+    background-color: #f9f7f3;
+  }
+  .contactT__info__article {
+    width: 300px;
+    height: 140px;
+  }
+  .contactT__info__article--sentence {
+    font-size: 13px;
+    text-align: justify;
+  }
+  form {
+    font-size: 13px;
+    padding: 0;
+  }
+  form .contactT__form__element--inrow {
+    width: 300px;
+  }
+  .contactT__visit--size {
+    width: 300px;
+    height: 340px;
+  }
+}
+/* Se usan en todo el sitio (o casi todo)  html, body, header, footer*/
+* {
+  /* Reseteo CSS, border box-permite que el contenedor mantenga el tamaño que le damos */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Hace que el valor de 1rem=10px, ya que por default es 16px */
+  font-size: 62.5%;
+}
+
+body {
+  /* Tipo de fuente a usar, es externa, y de no poder se usa sans-serif, recuerda se prioriza id-class-tag*/
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: #adc178;
+  color: #f9f7f3;
+}
+
+a {
+  text-decoration: none;
+  color: #f9f7f3;
+}
+
+.headingBottom {
+  /* aplicable a todos los "h" que esten en la parte baja del contenedor */
+  width: 50%;
+  height: 25px;
+  background-color: beige;
+  color: #4f000b;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  font-size: 16px;
+}
+
+.headingTop {
+  /* aplicable a todos los "h" que esten en la parte alta del contenedor */
+  width: 30%;
+  height: 25px;
+  background-color: beige;
+  color: #4f000b;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  font-size: 19px;
+}
+
+.imageMain {
+  /* Aplicable a toda imagen dentro de un main */
+  width: 800px;
+  height: 450px;
+  margin: 5px 10px;
+}
+
+.imageProduct {
+  /* Aplicable a toda imagen de producto */
+  width: 330px;
+  height: 310px;
+  text-align: center;
+}
+
+.imageProductCont {
+  /* Aplicable a todo contenedor de imagen de producto */
+  position: relative;
+  display: inline-block;
+  width: 340px;
+  height: 320px;
+  padding: 5px;
+  background-color: #f9f7f3;
+  margin: 5px 5px;
+}
+
+.logoMini {
+  /* Son todos los logos chiquitos, de redes sociales, contacto */
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.communicateMedia {
+  /* Aquí están contenidos los mini logos de comunicación */
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: end;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+/* HEADER */
+.logoHeader {
+  /* Aplicable a la imagen del logo del negocio en el header */
+  width: 120px;
+  height: 120px;
+}
+
+.headerCont {
+  /* Encabezado */
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background-color: #4f000b;
+}
+.headerCont .logoHeaderCont {
+  /* Donde está contenida la imagen del logo del negocio en el header */
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.headerCont .pageTitle {
+  /* Título, nombre del negocio */
+  font-family: "Delicious Handrawn", "Poppins", sans-serif;
+  font-size: 50px;
+  position: absolute;
+  width: 60%;
+  height: 50%;
+  padding-top: 10px;
+  left: 20%;
+  text-align: center;
+}
+.headerCont .navigator {
+  /* navegador */
+  position: absolute;
+  width: 70%;
+  height: 30%;
+  top: 55%;
+  left: 15%;
+  text-align: center;
+  font-size: 18px;
+}
+.headerCont .navigator .nav {
+  /* bootstrap clases header */
+  justify-content: space-evenly;
+}
+.headerCont .navigator .nav-item {
+  background-color: #4f000b;
+}
+.headerCont .navigator .nav-link {
+  color: #f9f7f3;
+  padding: 3px 4px;
+}
+
+/* FOOTER */
+.footerCont {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  background-color: #0a0908;
+  font-size: 15px;
+}
+
+.contactFooter {
+  /* Contactanos y horario de atención en footer */
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.logoFooterCont {
+  /* Donde está contenida la imagen del logo del negocio en el footer */
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  top: 0;
+  left: 20%;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.logoFooter {
+  /* Aplicable a la imagen del logo del negocio en el footer */
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+}
+
+.copyrightAutor {
+  /* Copyright en footer */
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  padding-bottom: 10px;
+  text-align: center;
+  border-top-style: groove;
+  border-top-color: gray;
+}
+
+/* Tamaño tablet aplicable a todo el sitio */
+@media screen and (max-width: 840px) {
+  .imageProduct {
+    height: 290px;
+    width: 310px;
+  }
+  .logoMini {
+    height: 21px;
+    width: 21px;
+  }
+  /* HEADER */
+  .logoHeader {
+    height: 70px;
+    width: 70px;
+  }
+  .headerCont {
+    height: 100px;
+  }
+  .headerCont .pageTitle {
+    font-size: 30px;
+  }
+  .headerCont .navigator {
+    font-size: 10px;
+    width: 80%;
+  }
+  /* FOOTER */
+  .logoFooter {
+    height: 65px;
+    width: 65px;
+  }
+}
+/* Tamaño celular aplicable a todo el sitio */
+@media screen and (max-width: 500px) {
+  /* HEADER */
+  .headerCont {
+    height: 80px;
+  }
+  .headerCont .logoHeaderCont {
+    display: none;
+  }
+  .headerCont .pageTitle {
+    font-size: 19px;
+    left: 0;
+    width: 60%;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .headerCont .logoMini {
+    height: 18px;
+    width: 18px;
+  }
+  .headerCont .navigator {
+    font-size: 9.5px;
+    left: 0;
+    width: 100%;
+  }
+  /* FOOTER */
+  .footerCont {
+    font-size: 10px;
+  }
+  .footerCont .contactFooter {
+    top: 30%;
+    left: 50%;
+    height: 40%;
+    width: 50%;
+    text-align: right;
+    padding-top: 0;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footerCont .communicateMedia {
+    width: 50%;
+    height: 30%;
+  }
+  .footerCont .logoMini {
+    height: 18px;
+    width: 18px;
+  }
+  .footerCont .logoFooterCont {
+    left: 0;
+    width: 50%;
+    height: 50%;
+    text-align: left;
+  }
+  .footerCont .logoFooter {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

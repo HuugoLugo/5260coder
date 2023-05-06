@@ -1,0 +1,54 @@
+@mixin sizesWH ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin headingStyle {
+    background-color: beige;
+    color: #4f000b;
+    text-align: center;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+@mixin flex-row-evenly {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+@mixin flex-row-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+@mixin flex-row-end {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flex-column-evenly{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@mixin flex-column-between{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
