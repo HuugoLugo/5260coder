@@ -71,9 +71,8 @@
             "partners partners";
 
         h2 {
-            background-color: #f9f7f3;
-            color: #0a0908;
-            text-align: center;
+            background: linear-gradient(to left, beige, #afa38a);
+            @include headingStyle;
         }
     }
 

@@ -190,8 +190,8 @@
     grid-template-areas: "history history" "imageStory imageStory" "partners partners";
   }
   .contTus h2 {
-    background-color: #f9f7f3;
-    color: #0a0908;
+    background: linear-gradient(to left, beige, #afa38a);
+    color: #4f000b;
     text-align: center;
   }
   .contTus__image {
@@ -302,8 +302,8 @@
     font-size: 12px;
   }
   .contTsteps .contTsteps__title {
-    background-color: #f9f7f3;
-    color: #0a0908;
+    background: linear-gradient(to left, beige, #afa38a);
+    color: #4f000b;
     text-align: center;
   }
   .contTsteps .contTsteps__section--style {
@@ -327,6 +327,7 @@
 .contactT__title {
   grid-area: titl;
   width: 50%;
+  color: #4f000b;
   text-align: center;
   align-self: center;
 }
@@ -468,7 +469,7 @@ select {
   .contactT__title {
     font-size: 15px;
     width: 100%;
-    background-color: #f9f7f3;
+    background: linear-gradient(to left, beige, #afa38a);
   }
   .contactT__info__article {
     width: 300px;
@@ -520,26 +521,26 @@ a {
   /* aplicable a todos los "h" que esten en la parte baja del contenedor */
   width: 50%;
   height: 25px;
-  background-color: beige;
   color: #4f000b;
   text-align: center;
   position: absolute;
   bottom: 0;
   left: 25%;
   font-size: 16px;
+  background: linear-gradient(to left, beige, #afa38a);
 }
 
 .headingTop {
   /* aplicable a todos los "h" que esten en la parte alta del contenedor */
   width: 30%;
   height: 25px;
-  background-color: beige;
   color: #4f000b;
   text-align: center;
   position: absolute;
   top: 0;
   left: 35%;
   font-size: 19px;
+  border-bottom: 1.5px groove #4f000b;
 }
 
 .imageMain {
@@ -729,6 +730,15 @@ a {
 }
 /* Tamaño celular aplicable a todo el sitio */
 @media screen and (max-width: 500px) {
+  .headingTop {
+    /* aplicable a todos los "h" que esten en la parte alta del contenedor */
+    width: 100%;
+    height: 25px;
+    left: 0;
+    font-size: 19px;
+    border-bottom: 1.5px groove #4f000b;
+    background: linear-gradient(to left, beige, #afa38a);
+  }
   /* HEADER */
   .headerCont {
     height: 80px;

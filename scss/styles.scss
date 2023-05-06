@@ -39,6 +39,7 @@ a {
     bottom: 0;
     left: 25%;
     font-size: 16px;
+    background: linear-gradient(to left, beige, #afa38a);
 }
 
 .headingTop {
@@ -49,6 +50,7 @@ a {
     top: 0;
     left: 35%;
     font-size: 19px;
+    border-bottom: 1.5px groove #4f000b
 }
 
 .imageMain {
@@ -96,10 +98,10 @@ a {
 }
 
 /* HEADER */
-    .logoHeader {
-        /* Aplicable a la imagen del logo del negocio en el header */
-        @include sizesWH (120px, 120px);
-    }
+.logoHeader {
+    /* Aplicable a la imagen del logo del negocio en el header */
+    @include sizesWH (120px, 120px);
+}
 
 .headerCont {
     /* Encabezado */
@@ -116,6 +118,7 @@ a {
         padding-top: 10px;
         padding-left: 10px;
     }
+
     .pageTitle {
         /* Título, nombre del negocio */
         font-family: 'Delicious Handrawn', 'Poppins', sans-serif;
@@ -204,6 +207,7 @@ a {
         height: 290px;
         width: 310px;
     }
+
     .logoMini {
         height: 21px;
         width: 21px;
@@ -237,6 +241,14 @@ a {
 
 /* Tamaño celular aplicable a todo el sitio */
 @media screen and (max-width:500px) {
+    .headingTop {
+        /* aplicable a todos los "h" que esten en la parte alta del contenedor */
+        @include sizesWH (100%, 25px);
+        left: 0;
+        font-size: 19px;
+        border-bottom: 1.5px groove #4f000b;
+        background: linear-gradient(to left, beige, #afa38a);
+    }
 
     /* HEADER */
     .headerCont {

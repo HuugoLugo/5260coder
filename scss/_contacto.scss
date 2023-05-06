@@ -16,7 +16,7 @@
 .contactT__title {
     grid-area: titl;
     width: 50%;
-    text-align: center;
+    @include headingStyle;
     align-self: center;
 }
 
@@ -162,7 +162,7 @@ select {
     .contactT__title {
         font-size: 15px;
         width: 100%;
-        background-color: #f9f7f3;
+        background: linear-gradient(to left, beige, #afa38a);
     }
 
     .contactT__info__article {
