@@ -1,11 +1,34 @@
+$colors:(
+    green-light:#adc178,
+    red-wine:#4f000b,
+    notSoBlack:#0a0908,
+    notSoWhite:#f9f7f3,
+    gray-dark:#201d19
+);
+
+$sizesFont:(
+    titleL:50px,
+    navL:18px,
+    headingTopL:21px,
+    headingBottomL:18px,
+    textsL:16px,
+    titleT:30px,
+    navT:12px,
+    footerT:13px,
+    headingsT-S:17px,
+    textsT-S:14px,
+    titleS:19px,
+    navS:9.5px,
+    footerS:10px
+);
+
 @mixin sizesWH ($width, $height) {
     width: $width;
     height: $height;
 }
 
 @mixin headingStyle {
-    background-color: beige;
-    color: #4f000b;
+    color: map-get($colors,red-wine);
     text-align: center;
 }
 
@@ -51,4 +74,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@mixin formElementsStyle-transparent{
+    border: 3px groove map-get($colors,notSoBlack);
+    background-color: transparent;
+    color: map-get($colors,notSoWhite);
+}
+
+@mixin formElementsStyle-notTransparent{
+    border: 3px groove map-get($colors,notSoBlack);
+    background-color: map-get($colors,gray-dark);
+    color: map-get($colors,notSoWhite);
 }

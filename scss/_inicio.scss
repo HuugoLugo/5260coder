@@ -2,10 +2,11 @@
 .mainIndex {
     position: relative;
     height: 515px;
-    background-color: #201d19;
+    background-color: map-get($colors,gray-dark);
 
     section {
         position: absolute;
+        top: 10px;
         left: 15%;
         @include sizesWH (70%, 480px);
         @include flex-row-center;
@@ -14,8 +15,9 @@
 
 .conoceIndex {
     position: relative;
-    @include sizesWH (80%, 150px);
+    @include sizesWH (80%, 135px);
     left: 10%;
+    margin-top: 10px;
     margin-bottom: 10px;
 
     article {
@@ -23,7 +25,6 @@
         @include sizesWH (80%, 70%);
         left: 10%;
         top: 10%;
-        font-size: 15px;
         text-align: justify;
     }
 }
@@ -32,18 +33,21 @@
     position: relative;
     @include sizesWH (80%, 700px);
     left: 10%;
+    margin-top: 10px;
     text-align: center;
 
     article {
+        padding-top: 10px;
         @include flex-row-center;
     }
 }
 
 .iframeDown {
     position: relative;
-    @include sizesWH (90%, 450px);
+    @include sizesWH (90%, 460px);
     @include flex-row-evenly;
     left: 5%;
+    padding-top: 10px;
 }
 
 
@@ -87,14 +91,13 @@
     }
 
     .conoceIndex {
-        height: 230px;
-        color: #0a0908;
+        height: 200px;
+        color: map-get($colors,notSoBlack);
 
         article {
             @include sizesWH (100%, 80%);
             left: 0;
             top: 10%;
-            font-size: 14px;
         }
     }
 

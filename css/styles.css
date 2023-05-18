@@ -7,6 +7,7 @@
 }
 .mainIndex section {
   position: absolute;
+  top: 10px;
   left: 15%;
   width: 70%;
   height: 480px;
@@ -19,8 +20,9 @@
 .conoceIndex {
   position: relative;
   width: 80%;
-  height: 150px;
+  height: 135px;
   left: 10%;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .conoceIndex article {
@@ -29,7 +31,6 @@
   height: 70%;
   left: 10%;
   top: 10%;
-  font-size: 15px;
   text-align: justify;
 }
 
@@ -38,9 +39,11 @@
   width: 80%;
   height: 700px;
   left: 10%;
+  margin-top: 10px;
   text-align: center;
 }
 .topProducts article {
+  padding-top: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -50,12 +53,13 @@
 .iframeDown {
   position: relative;
   width: 90%;
-  height: 450px;
+  height: 460px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   left: 5%;
+  padding-top: 10px;
 }
 
 /* Tamaño tablet-Página inicio */
@@ -94,7 +98,7 @@
     margin: 3px;
   }
   .conoceIndex {
-    height: 230px;
+    height: 200px;
     color: #0a0908;
   }
   .conoceIndex article {
@@ -102,7 +106,6 @@
     height: 80%;
     left: 0;
     top: 10%;
-    font-size: 14px;
   }
   .topProducts {
     width: 100%;
@@ -177,8 +180,9 @@
     width: 360px;
     height: 410px;
   }
-  .contTus__history p {
-    font-size: 13px;
+  .conTus__history__title {
+    font-size: 17px;
+    text-align: center;
   }
 }
 /* Tamaño celular página nosotros */
@@ -189,9 +193,9 @@
     grid-column: 1fr 1fr;
     grid-template-areas: "history history" "imageStory imageStory" "partners partners";
   }
-  .contTus h2 {
+  .contTus .conTus__history__title {
     background-color: #f9f7f3;
-    color: #0a0908;
+    color: #4f000b;
     text-align: center;
   }
   .contTus__image {
@@ -253,8 +257,10 @@
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 500px;
   grid-template-areas: "howTo howTo buy";
-  font-size: 15px;
   text-align: justify;
+}
+.contTsteps .contTsteps__title {
+  font-size: 21px;
 }
 .contTsteps .contTsteps__how {
   grid-area: howTo;
@@ -283,10 +289,12 @@
   .contTsteps {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 460px;
+    grid-template-rows: 470px;
     grid-template-areas: "howTo buy";
-    font-size: 13px;
     text-align: left;
+  }
+  .contTsteps .contTsteps__title {
+    font-size: 17px;
   }
   .contTsteps .contTsteps__buyProduct {
     color: #0a0908;
@@ -297,13 +305,12 @@
   .contTsteps {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 480px auto;
+    grid-template-rows: auto auto;
     grid-template-areas: "howTo howTo" "buy buy";
-    font-size: 12px;
   }
   .contTsteps .contTsteps__title {
     background-color: #f9f7f3;
-    color: #0a0908;
+    color: #4f000b;
     text-align: center;
   }
   .contTsteps .contTsteps__section--style {
@@ -317,39 +324,39 @@
   /* Contenedor grid página contacto formulario, info, visit*/
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: 50px 460px 460px;
+  grid-template-rows: 50px auto 460px;
   row-gap: 10px;
   grid-template-areas: "titl titl titl titl" "info info form form" "visit visit visit visit";
   justify-items: center;
-  color: #0a0908;
 }
 
 .contactT__title {
   grid-area: titl;
   width: 50%;
-  text-align: center;
   align-self: center;
+  font-size: 21px;
+  color: #4f000b;
+  text-align: center;
 }
 
 .contactT__info {
   grid-area: info;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.contactT__info__article {
-  width: 450px;
-  height: 230px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.contactT__info__article {
+  width: 450px;
+  height: 230px;
+  border-top: 1px groove #0a0908;
+}
+
 .contactT__info__article--sentence {
-  border-bottom: 1px groove #0a0908;
   text-align: center;
-  font-size: 14px;
-  color: #0a0908;
+  margin-bottom: 3rem;
 }
 
 .contactT__form {
@@ -379,8 +386,8 @@ form {
 input[type=text] {
   border: 3px groove #0a0908;
   background-color: transparent;
-  width: 75%;
   color: #f9f7f3;
+  width: 75%;
 }
 
 input[type=text]:focus {
@@ -390,8 +397,8 @@ input[type=text]:focus {
 input[type=email] {
   border: 3px groove #0a0908;
   background-color: transparent;
-  width: 75%;
   color: #f9f7f3;
+  width: 75%;
 }
 
 input[type=email]:focus {
@@ -401,22 +408,22 @@ input[type=email]:focus {
 input[type=reset] {
   border: 3px groove #0a0908;
   background-color: #201d19;
-  width: 35%;
   color: #f9f7f3;
+  width: 35%;
 }
 
 input[type=submit] {
   border: 3px groove #0a0908;
   background-color: #201d19;
-  width: 35%;
   color: #f9f7f3;
+  width: 35%;
 }
 
 select {
   border: 3px groove #0a0908;
   background-color: #201d19;
-  width: 40%;
   color: #f9f7f3;
+  width: 40%;
   text-align: center;
 }
 
@@ -443,10 +450,11 @@ select {
     grid-template-areas: "titl titl" "info form" "visit visit";
   }
   .contactT__title {
-    font-size: 15px;
+    font-size: 17px;
   }
   .contactT__info__article {
     width: auto;
+    color: #0a0908;
   }
   .contactT__form__element--inrow {
     width: 400px;
@@ -466,20 +474,18 @@ select {
     grid-template-areas: "titl" "info" "form" "visit";
   }
   .contactT__title {
-    font-size: 15px;
     width: 100%;
     background-color: #f9f7f3;
   }
   .contactT__info__article {
     width: 300px;
-    height: 140px;
+    height: auto;
   }
   .contactT__info__article--sentence {
-    font-size: 13px;
     text-align: justify;
+    margin-bottom: 1rem;
   }
   form {
-    font-size: 13px;
     padding: 0;
   }
   form .contactT__form__element--inrow {
@@ -506,7 +512,7 @@ html {
 body {
   /* Tipo de fuente a usar, es externa, y de no poder se usa sans-serif, recuerda se prioriza id-class-tag*/
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   background-color: #adc178;
   color: #f9f7f3;
 }
@@ -520,26 +526,26 @@ a {
   /* aplicable a todos los "h" que esten en la parte baja del contenedor */
   width: 50%;
   height: 25px;
-  background-color: beige;
   color: #4f000b;
   text-align: center;
   position: absolute;
   bottom: 0;
   left: 25%;
-  font-size: 16px;
+  font-size: 18px;
+  background: linear-gradient(to left, beige, #afa38a);
 }
 
 .headingTop {
   /* aplicable a todos los "h" que esten en la parte alta del contenedor */
   width: 30%;
   height: 25px;
-  background-color: beige;
   color: #4f000b;
   text-align: center;
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 35%;
-  font-size: 19px;
+  font-size: 21px;
+  border-bottom: 1.5px groove #4f000b;
 }
 
 .imageMain {
@@ -652,7 +658,6 @@ a {
   width: 100%;
   height: 130px;
   background-color: #0a0908;
-  font-size: 15px;
 }
 
 .contactFooter {
@@ -698,18 +703,28 @@ a {
 
 /* Tamaño tablet aplicable a todo el sitio */
 @media screen and (max-width: 840px) {
+  body {
+    /* Tipo de fuente a usar, es externa, y de no poder se usa sans-serif, recuerda se prioriza id-class-tag*/
+    font-size: 14px;
+  }
+  .headingTop {
+    font-size: 17px;
+  }
+  .headingBottom {
+    font-size: 17px;
+  }
   .imageProduct {
-    height: 290px;
     width: 310px;
+    height: 290px;
   }
   .logoMini {
-    height: 21px;
     width: 21px;
+    height: 21px;
   }
   /* HEADER */
   .logoHeader {
-    height: 70px;
     width: 70px;
+    height: 70px;
   }
   .headerCont {
     height: 100px;
@@ -718,17 +733,28 @@ a {
     font-size: 30px;
   }
   .headerCont .navigator {
-    font-size: 10px;
+    font-size: 12px;
     width: 80%;
   }
   /* FOOTER */
-  .logoFooter {
-    height: 65px;
+  .footerCont {
+    font-size: 13px;
+  }
+  .footerCont .logoFooter {
     width: 65px;
+    height: 65px;
   }
 }
 /* Tamaño celular aplicable a todo el sitio */
 @media screen and (max-width: 500px) {
+  .headingTop {
+    /* aplicable a todos los "h" que esten en la parte alta del contenedor */
+    width: 100%;
+    height: 25px;
+    left: 0;
+    border-bottom: 1.5px groove #4f000b;
+    background: linear-gradient(to left, beige, #afa38a);
+  }
   /* HEADER */
   .headerCont {
     height: 80px;
@@ -744,8 +770,8 @@ a {
     padding-left: 10px;
   }
   .headerCont .logoMini {
-    height: 18px;
     width: 18px;
+    height: 18px;
   }
   .headerCont .navigator {
     font-size: 9.5px;
@@ -759,8 +785,8 @@ a {
   .footerCont .contactFooter {
     top: 30%;
     left: 50%;
-    height: 40%;
     width: 50%;
+    height: 40%;
     text-align: right;
     padding-top: 0;
     padding-right: 10px;
@@ -771,10 +797,6 @@ a {
     width: 50%;
     height: 30%;
   }
-  .footerCont .logoMini {
-    height: 18px;
-    width: 18px;
-  }
   .footerCont .logoFooterCont {
     left: 0;
     width: 50%;
@@ -782,8 +804,8 @@ a {
     text-align: left;
   }
   .footerCont .logoFooter {
-    height: 50px;
     width: 50px;
+    height: 50px;
   }
 }
 

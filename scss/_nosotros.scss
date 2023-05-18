@@ -14,7 +14,7 @@
     .contTus__history {
         grid-area: history;
         padding: 10px;
-        background-color: #201d19;
+        background-color: map-get($colors,gray-dark);
 
         p {
             margin-bottom: 2rem;
@@ -29,9 +29,7 @@
 
     .contTus__partner {
         grid-area: partners;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        @include flex-column-evenly;
         background-color: #463b2d;
 
         article {
@@ -51,11 +49,9 @@
     .imageStory {
         @include sizesWH (360px, 410px);
     }
-
-    .contTus__history {
-        p {
-            font-size: 13px;
-        }
+    .conTus__history__title{
+        font-size: map-get($sizesFont,headingsT-S);
+        text-align: center;
     }
 }
 
@@ -70,10 +66,9 @@
             "imageStory imageStory"
             "partners partners";
 
-        h2 {
-            background-color: #f9f7f3;
-            color: #0a0908;
-            text-align: center;
+        .conTus__history__title {
+            background-color: map-get($colors,notSoWhite);
+            @include headingStyle;
         }
     }
 

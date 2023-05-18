@@ -5,18 +5,20 @@
     grid-template-rows: 500px;
     grid-template-areas:
         "howTo howTo buy";
-    font-size: 15px;
     text-align: justify;
 
+    .contTsteps__title{
+        font-size: map-get($sizesFont,headingTopL);
+    }
     .contTsteps__how {
         grid-area: howTo;
         @include flex-column-between;
-        background-color: #201d19;
+        background-color: map-get($colors,gray-dark);
         padding: 10px;
     }
 
     .contTsteps__section--style {
-        border-top: 1px groove #0a0908;
+        border-top: 1px groove map-get($colors,notSoBlack);
 
         a {
             text-decoration-line: underline;
@@ -35,14 +37,17 @@
     .contTsteps {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 460px;
+        grid-template-rows: 470px;
         grid-template-areas:
             "howTo buy";
-        font-size: 13px;
         text-align: left;
 
+        .contTsteps__title {
+            font-size: map-get($sizesFont,headingsT-S);
+        }
+
         .contTsteps__buyProduct {
-            color: #0a0908;
+            color: map-get($colors,notSoBlack);
         }
     }
 }
@@ -52,15 +57,14 @@
     .contTsteps {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 480px auto;
+        grid-template-rows: auto auto;
         grid-template-areas:
             "howTo howTo"
             "buy buy";
-        font-size: 12px;
 
         .contTsteps__title {
-            background-color: #f9f7f3;
-            color: #0a0908;
+            background-color: map-get($colors,notSoWhite);
+            color: map-get($colors,red-wine);
             text-align: center;
         }
 

@@ -21,14 +21,14 @@ html {
 body {
     /* Tipo de fuente a usar, es externa, y de no poder se usa sans-serif, recuerda se prioriza id-class-tag*/
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    background-color: #adc178;
-    color: #f9f7f3;
+    font-size: map-get($sizesFont, textsL);
+    background-color: map-get($colors, green-light);
+    color: map-get($colors, notSoWhite);
 }
 
 a {
     text-decoration: none;
-    color: #f9f7f3;
+    color: map-get($colors, notSoWhite);
 }
 
 .headingBottom {
@@ -38,7 +38,8 @@ a {
     position: absolute;
     bottom: 0;
     left: 25%;
-    font-size: 16px;
+    font-size: map-get($sizesFont, headingBottomL);
+    background: linear-gradient(to left, beige, #afa38a);
 }
 
 .headingTop {
@@ -46,9 +47,10 @@ a {
     @include sizesWH (30%, 25px);
     @include headingStyle;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 35%;
-    font-size: 19px;
+    font-size: map-get($sizesFont, headingTopL);
+    border-bottom: 1.5px groove map-get($colors, red-wine);
 }
 
 .imageMain {
@@ -56,11 +58,6 @@ a {
     @include sizesWH (800px, 450px);
     margin: 5px 10px;
 }
-
-// SIEMPRE NO LO USÉ.imageMainCont {
-//     @include sizesWH (820px, 460px);
-//     background-color: #f9f7f3;
-// }
 
 .imageProduct {
     /* Aplicable a toda imagen de producto */
@@ -74,7 +71,7 @@ a {
     display: inline-block;
     @include sizesWH (340px, 320px);
     padding: 5px;
-    background-color: #f9f7f3;
+    background-color: map-get($colors, notSoWhite);
     margin: 5px 5px;
 }
 
@@ -96,16 +93,16 @@ a {
 }
 
 /* HEADER */
-    .logoHeader {
-        /* Aplicable a la imagen del logo del negocio en el header */
-        @include sizesWH (120px, 120px);
-    }
+.logoHeader {
+    /* Aplicable a la imagen del logo del negocio en el header */
+    @include sizesWH (120px, 120px);
+}
 
 .headerCont {
     /* Encabezado */
     position: relative;
     @include sizesWH (100%, 140px);
-    background-color: #4f000b;
+    background-color: map-get($colors, red-wine);
 
     .logoHeaderCont {
         /* Donde está contenida la imagen del logo del negocio en el header */
@@ -116,10 +113,11 @@ a {
         padding-top: 10px;
         padding-left: 10px;
     }
+
     .pageTitle {
         /* Título, nombre del negocio */
         font-family: 'Delicious Handrawn', 'Poppins', sans-serif;
-        font-size: 50px;
+        font-size: map-get($sizesFont, titleL);
         position: absolute;
         @include sizesWH (60%, 50%);
         padding-top: 10px;
@@ -134,7 +132,7 @@ a {
         top: 55%;
         left: 15%;
         text-align: center;
-        font-size: 18px;
+        font-size: map-get($sizesFont, navL);
 
         .nav {
             /* bootstrap clases header */
@@ -142,11 +140,11 @@ a {
         }
 
         .nav-item {
-            background-color: #4f000b;
+            background-color: map-get($colors, red-wine);
         }
 
         .nav-link {
-            color: #f9f7f3;
+            color: map-get($colors, notSoWhite);
             padding: 3px 4px;
         }
     }
@@ -156,8 +154,7 @@ a {
 .footerCont {
     position: relative;
     @include sizesWH (100%, 130px);
-    background-color: #0a0908;
-    font-size: 15px;
+    background-color: map-get($colors, notSoBlack);
 }
 
 .contactFooter {
@@ -199,44 +196,65 @@ a {
 
 /* Tamaño tablet aplicable a todo el sitio */
 @media screen and (max-width:840px) {
+    body {
+        /* Tipo de fuente a usar, es externa, y de no poder se usa sans-serif, recuerda se prioriza id-class-tag*/
+        font-size: map-get($sizesFont, textsT-S);
+    }
+
+    .headingTop {
+        font-size: map-get($sizesFont, headingsT-S);
+    }
+
+    .headingBottom {
+        font-size: map-get($sizesFont, headingsT-S);
+    }
 
     .imageProduct {
-        height: 290px;
-        width: 310px;
+        @include sizesWH (310px, 290px);
     }
+
     .logoMini {
-        height: 21px;
-        width: 21px;
+        @include sizesWH (21px, 21px);
     }
 
     /* HEADER */
     .logoHeader {
-        height: 70px;
-        width: 70px;
+        @include sizesWH (70px, 70px);
     }
 
     .headerCont {
         height: 100px;
 
         .pageTitle {
-            font-size: 30px;
+            font-size: map-get($sizesFont, titleT);
         }
 
         .navigator {
-            font-size: 10px;
+            font-size: map-get($sizesFont, navT);
             width: 80%;
         }
     }
 
     /* FOOTER */
-    .logoFooter {
-        height: 65px;
-        width: 65px;
+    .footerCont {
+        font-size: map-get($sizesFont, footerT);
+
+        .logoFooter {
+            @include sizesWH(65px, 65px);
+        }
     }
 }
 
 /* Tamaño celular aplicable a todo el sitio */
 @media screen and (max-width:500px) {
+
+    .headingTop {
+        /* aplicable a todos los "h" que esten en la parte alta del contenedor */
+        @include sizesWH (100%, 25px);
+        left: 0;
+        border-bottom: 1.5px groove map-get($colors, red-wine);
+        background: linear-gradient(to left, beige, #afa38a);
+    }
 
     /* HEADER */
     .headerCont {
@@ -247,7 +265,7 @@ a {
         }
 
         .pageTitle {
-            font-size: 19px;
+            font-size: map-get($sizesFont, titleS);
             left: 0;
             width: 60%;
             text-align: left;
@@ -255,12 +273,11 @@ a {
         }
 
         .logoMini {
-            height: 18px;
-            width: 18px;
+            @include sizesWH (18px, 18px);
         }
 
         .navigator {
-            font-size: 9.5px;
+            font-size: map-get($sizesFont, navS);
             left: 0;
             width: 100%;
         }
@@ -268,13 +285,12 @@ a {
 
     /* FOOTER */
     .footerCont {
-        font-size: 10px;
+        font-size: map-get($sizesFont, footerS);
 
         .contactFooter {
             top: 30%;
             left: 50%;
-            height: 40%;
-            width: 50%;
+            @include sizesWH (50%, 40%);
             text-align: right;
             padding-top: 0;
             padding-right: 10px;
@@ -283,25 +299,17 @@ a {
         }
 
         .communicateMedia {
-            width: 50%;
-            height: 30%;
-        }
-
-        .logoMini {
-            height: 18px;
-            width: 18px;
+            @include sizesWH (50%, 30%);
         }
 
         .logoFooterCont {
             left: 0;
-            width: 50%;
-            height: 50%;
+            @include sizesWH (50%, 50%);
             text-align: left;
         }
 
         .logoFooter {
-            height: 50px;
-            width: 50px;
+            @include sizesWH (50px, 50px);
         }
     }
 }
